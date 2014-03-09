@@ -1,0 +1,1261 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"SPI",
+				"ADE7758SPI"
+			],
+			[
+				"ADE",
+				"ADE7758SPI"
+			],
+			[
+				"key",
+				"keywords"
+			],
+			[
+				"__ven",
+				"__vendor_name"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"Prod",
+				"Products"
+			],
+			[
+				"b",
+				"barcode"
+			],
+			[
+				"vend",
+				"vendor"
+			],
+			[
+				"ba",
+				"BaseAccounts"
+			],
+			[
+				"bank",
+				"bank_profile"
+			],
+			[
+				"__p",
+				"__peer_id"
+			],
+			[
+				"__pee",
+				"__peer_name"
+			],
+			[
+				"coupon",
+				"coupon_instances"
+			],
+			[
+				"cou",
+				"coups"
+			],
+			[
+				"rece",
+				"receiverShopper_ids"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"peer",
+				"peer_id"
+			],
+			[
+				"own",
+				"owner_name"
+			],
+			[
+				"pee",
+				"peer_id"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"__b",
+				"__broker_id"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"__c",
+				"__category"
+			],
+			[
+				"_vendor",
+				"__vendor_id"
+			],
+			[
+				"_ven",
+				"__vendor_id"
+			],
+			[
+				"email",
+				"emails"
+			],
+			[
+				"time",
+				"time_expiry"
+			],
+			[
+				"tim",
+				"time_expiry"
+			],
+			[
+				"ow",
+				"owner_id"
+			],
+			[
+				"owner",
+				"owner_id"
+			],
+			[
+				"expiry",
+				"reservation_expiry"
+			],
+			[
+				"__",
+				"__coordinates"
+			],
+			[
+				"__l",
+				"__longitude"
+			],
+			[
+				"shopper",
+				"shopper_id"
+			],
+			[
+				"sh",
+				"shopper_id"
+			],
+			[
+				"s",
+				"string"
+			],
+			[
+				"__sho",
+				"__shopper_id"
+			],
+			[
+				"noti",
+				"Notifications"
+			],
+			[
+				"fin",
+				"find"
+			],
+			[
+				"im",
+				"coupon_image"
+			],
+			[
+				"date",
+				"date_created"
+			],
+			[
+				"coup",
+				"coupon_instances"
+			],
+			[
+				"__qu",
+				"__quantity"
+			],
+			[
+				"u",
+				"undefined"
+			],
+			[
+				"off",
+				"offer_expired"
+			],
+			[
+				"ex",
+				"offer_expired"
+			],
+			[
+				"__of",
+				"__offer_expired"
+			],
+			[
+				"sho",
+				"shoppervote"
+			],
+			[
+				"Coupon",
+				"Coupons"
+			],
+			[
+				"us",
+				"username"
+			],
+			[
+				"base",
+				"base_account_id"
+			],
+			[
+				"Use",
+				"UserBaseAccounts"
+			],
+			[
+				"v",
+				"vprofile"
+			],
+			[
+				"cre",
+				"creator"
+			],
+			[
+				"creat",
+				"creator_id"
+			],
+			[
+				"shoppe",
+				"shoppervote"
+			],
+			[
+				"instan",
+				"coupon_instances"
+			],
+			[
+				"_id",
+				"__coupon_id"
+			],
+			[
+				"coupo",
+				"coupon_id"
+			],
+			[
+				"de",
+				"delete"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"redeem",
+				"redeemed"
+			],
+			[
+				"Fin",
+				"findOne"
+			],
+			[
+				"reservation",
+				"reservation_expiry"
+			],
+			[
+				"met",
+				"Meteor"
+			],
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"__sh",
+				"__shopper_id"
+			],
+			[
+				"parse",
+				"parseFloat"
+			],
+			[
+				"broker",
+				"broker_discount"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"last",
+				"last_name"
+			],
+			[
+				"vote",
+				"vote__inc"
+			],
+			[
+				"shopp",
+				"shoppervote"
+			],
+			[
+				"ven",
+				"vendor_id"
+			],
+			[
+				"vendor",
+				"vendor_id"
+			],
+			[
+				"manu",
+				"manufacturer"
+			],
+			[
+				"__cou",
+				"__coupon_id"
+			],
+			[
+				"Red",
+				"redeemed"
+			],
+			[
+				"sort",
+				"__sortby"
+			],
+			[
+				"dat",
+				"redeemed_datetime"
+			],
+			[
+				"red",
+				"redeemed"
+			],
+			[
+				"ve",
+				"vendor"
+			],
+			[
+				"__br",
+				"__broker_discount"
+			],
+			[
+				"bro",
+				"broker_id"
+			],
+			[
+				"broe",
+				"__broker_id"
+			],
+			[
+				"ma",
+				"__max_broker_discount"
+			],
+			[
+				"__broker",
+				"__broker_id"
+			],
+			[
+				"exis",
+				"exists"
+			],
+			[
+				"br",
+				"broker_discount"
+			],
+			[
+				"c",
+				"coupon_instances"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"coun",
+				"coupon_instances"
+			],
+			[
+				"love",
+				"love_count"
+			],
+			[
+				"__h",
+				"__hot"
+			],
+			[
+				"Categor",
+				"CategoryProfiles"
+			],
+			[
+				"Cate",
+				"CategoryProfiles"
+			],
+			[
+				"Co",
+				"Collection"
+			],
+			[
+				"latitud",
+				"__latitude"
+			],
+			[
+				"lo",
+				"longitude"
+			],
+			[
+				"ra",
+				"radius"
+			],
+			[
+				"cos",
+				"console"
+			],
+			[
+				"__ve",
+				"__vendor_id"
+			],
+			[
+				"__coupon",
+				"__coupon_id"
+			],
+			[
+				"pr",
+				"product_name"
+			],
+			[
+				"instance",
+				"instance_count"
+			],
+			[
+				"ins",
+				"instance_count"
+			],
+			[
+				"inta",
+				"instance"
+			],
+			[
+				"un",
+				"undefined"
+			],
+			[
+				"Coupo",
+				"Coupons"
+			],
+			[
+				"__coup",
+				"__coupon_image"
+			],
+			[
+				"revenue",
+				"revenue_per_sales"
+			],
+			[
+				"max",
+				"max_broker_discount"
+			],
+			[
+				"fi",
+				"fields"
+			],
+			[
+				"get",
+				"getTime"
+			],
+			[
+				"reserve",
+				"reservation_expiry"
+			],
+			[
+				"ty",
+				"typeof"
+			],
+			[
+				"find",
+				"findOne"
+			],
+			[
+				"Cou",
+				"Coupons"
+			],
+			[
+				"__o",
+				"__vote_pages"
+			],
+			[
+				"__vote",
+				"__vote_pages"
+			],
+			[
+				"pages",
+				"vote_pages"
+			],
+			[
+				"prev",
+				"prev_vote"
+			],
+			[
+				"ft5x0x",
+				"ft5x0x_ts"
+			],
+			[
+				"vo",
+				"vote_pages"
+			],
+			[
+				"li",
+				"like_count"
+			],
+			[
+				"update",
+				"update_location"
+			],
+			[
+				"foll",
+				"followValue"
+			],
+			[
+				"follw",
+				"followable"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Sketches/mices/Master/mice_stamp2.ino",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "libaries/libWiTMon/ADE7758.h",
+			"settings":
+			{
+				"buffer_size": 3482,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libaries/libWiTMon/ADE7758.cpp",
+			"settings":
+			{
+				"buffer_size": 4420,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libaries/libWiTMon/spi.cpp",
+			"settings":
+			{
+				"buffer_size": 1988,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libaries/libWiTMon/spi.h",
+			"settings":
+			{
+				"buffer_size": 2488,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libaries/libWiTMon/pins.h",
+			"settings":
+			{
+				"buffer_size": 1076,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/Arduino/libraries/SPI/SPI.cpp",
+			"settings":
+			{
+				"buffer_size": 1734,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/Arduino/libraries/SPI/SPI.h",
+			"settings":
+			{
+				"buffer_size": 1611,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libaries/libWiTMon/cc1101.cpp",
+			"settings":
+			{
+				"buffer_size": 14732,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libaries/libWiTMon/cc1101.h",
+			"settings":
+			{
+				"buffer_size": 19090,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"selected_items":
+		[
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.h",
+		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/cc1101.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/spi.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/spi.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/cc1101.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/swcommand.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/swcommand.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/swpacket.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/swpacket.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/swquery.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/swquery.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/swstatus.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/swstatus.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/repeater.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/repeater.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/RELEASES.txt",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/register.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/register.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/panstamp.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/panstamp.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/nvolat.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/keywords.txt",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/datatypes.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/COPYING.txt",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/config.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/commonregs.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/ccpacket.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/calibration.cpp",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/calibration.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/avrrtc.h",
+		"/F/ARDUINO/WiTMon/libaries/panstamp/avrrtc.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/calibration.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/cc1101.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/cc1101.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/calibration.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/ccpacket.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/commonregs.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/config.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/nvolat.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/panstamp.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/panstamp.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/register.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/register.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/repeater.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/spi.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/spi.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/repeater.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/swcommand.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/swcommand.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/swpacket.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/swpacket.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/swquery.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/swquery.h",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/swstatus.cpp",
+		"/C/Users/Setsuna F. Seie/Desktop/CC1101/panstamp/panstamp/swstatus.h",
+		"/F/Work/MITM/mjit/server/api/login.js",
+		"/F/Work/MITM/mjit/server/api/models/shopper/shopper.js",
+		"/F/Work/MITM/mjit/server/api/routes_api.js",
+		"/F/Work/MITM/mjit/server/api/models/vendor/vendor.js",
+		"/F/Work/MITM/mjit/server/api/models/user/user.js",
+		"/F/ARDUINO/ADE7758/ADE7758/ADE7758.h",
+		"/F/ARDUINO/ADE7758/ADE7758/ADE7758.cpp",
+		"/F/ARDUINO/ADE7758/ADE7758/ADE7758.c",
+		"/F/Work/EMBEDSOURCING/WeKnowDeals/schema/coupons.json",
+		"/F/Work/MITM/mjit/server/api/email/email.js",
+		"/F/Work/EMBEDSOURCING/WeKnowDeals/server/api/login.js",
+		"/F/Work/EMBEDSOURCING/WeKnowDeals/schema/users.json",
+		"/F/Work/EMBEDSOURCING/WeKnowDeals/schema/base_accounts.json",
+		"/F/Work/EMBEDSOURCING/WeKnowDeals/server/server.js",
+		"/F/beaglebone/chai-pcr-LCD5-00A0.dts",
+		"/F/beaglebone/chai-pcr-LCDtouch5-00A0.dts",
+		"/F/beaglebone/chai-pcr-touch5-00A0.dts",
+		"/F/Work/EMBEDSOURCING/WeKnowDeals/server/test/fixtures/fixtures.js",
+		"/F/Work/EMBEDSOURCING/WeKnowDeals/common/routes/routes.js",
+		"/F/Work/MITM/mjit/common/collections/definitions/apis/collections.js",
+		"/F/Work/MITM/mjit/client/dashboard/admin/registeradminTemplate.js",
+		"/F/Work/MITM/mjit/schema/user_base_accounts.json",
+		"/F/Work/MITM/mjit/schema/redeemed_coupons.json",
+		"/F/Work/MITM/mjit/server/api/security/accounts/accounts.js",
+		"/F/Work/MITM/mjit/server/api/APIOutputFormat.js",
+		"/F/Work/MITM/mjit/server/api/models/product/product.js",
+		"/F/Work/MITM/mjit/client/dashboard/templating/foralledituserTemplate.js",
+		"/C/Users/Setsuna F. Seie/Downloads/PCRRealTime.tar/PCRRealTime/PCRRealTime/overlay/chai-pcr-00A0.dts",
+		"/F/Work/MITM/mjit/schema/coupons.json",
+		"/F/Work/MITM/mjit/schema/broker_coupons.json",
+		"/F/Work/MITM/mjit/server/api/models/broker/broker.js",
+		"/F/Work/MITM/mjit/server/api/models/coupon/coupon.js",
+		"/F/Work/MITM/mjit/server/server.js",
+		"/F/Work/nodeddp/example_2.js",
+		"/F/Work/nodeddp/example.js",
+		"/F/Work/MITM/mjit/server/publish.js",
+		"/F/Work/MITM/mjit/server/test/fixtures/fixtures.js",
+		"/F/Work/MITM/mjit/server/api/accounts/accounts.js",
+		"/F/Work/MITM/mjit/server/api/models/manufacturer/manufacturer.js",
+		"/F/ANDROID/Projects/addpkit/MeteorPartiesDDPClient/build.gradle",
+		"/F/Work/MITM/mjit/client/dashboard/templating/foralluserchangepass.js",
+		"/F/Work/MITM/mjit/client/dashboard/broker/brokermainviewTemplate.html",
+		"/F/Work/MITM/mjit/client/dashboard/broker/brokersendcouponsTemplate.js",
+		"/F/Work/MITM/mjit/client/mainTemplate.js",
+		"/F/Work/MITM/mjit/client/dashboard/manufacturer/addcouponTemplate.js",
+		"/F/Work/MITM/mjit/client/dashboard/manufacturer/addcouponTemplate.html",
+		"/F/Work/MITM/back/server.js",
+		"/F/Work/MITM/back/publish.js",
+		"/F/Work/MITM/Meteor/server/api/routes_api.js",
+		"/F/Work/MITM/Meteor/server/api/models/user/user.js",
+		"/F/Work/MITM/Meteor/server/api/models/shopper/shopper.js",
+		"/F/Work/MITM/Meteor/server/api/models/broker/broker.js",
+		"/F/Work/MITM/Meteor/schema/broker_coupons.json",
+		"/F/Work/MITM/Meteor/common/collections/definitions/apis/collections.js",
+		"/F/Work/MITM/Meteor/server/api/models/vendor/vendor.js",
+		"/F/Work/MITM/Meteor/server/api/models/manufacturer/manufacturer.js",
+		"/F/Work/MITM/Meteor/server/api/models/bank/bank.js",
+		"/F/Work/MITM/Meteor/server/api/models/product/product.js",
+		"/F/Work/MITM/Meteor/server/api/models/shopper/profiling.js",
+		"/F/Work/MITM/Meteor/client/mainTemplate.js",
+		"/F/Work/MITM/Meteor/server/api/models/coupon/coupon.js",
+		"/F/Work/MITM/Meteor/schema/notifications.json",
+		"/F/Work/MITM/Meteor/server/api/accounts/accounts.js",
+		"/F/Work/MITM/Meteor/schema/base_accounts.json",
+		"/F/Work/MITM/Meteor/schema/redeemed_coupons.json",
+		"/F/Work/MITM/Meteor/schema/categories.json",
+		"/F/Work/MITM/Meteor/schema/coupons.json",
+		"/F/Work/MITM/Meteor/server/test/fixtures/fixtures.js",
+		"/F/Work/MITM/Meteor/server/publish.js",
+		"/F/Work/nodeddp/node_modules/ddp/lib/ddp-client.js",
+		"/F/Work/MITM/Meteor/server/server.js",
+		"/F/Work/MITM/Meteorssh/common/models/coupon/coupon.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"SPI",
+			"ADE7758",
+			"ADE7758_",
+			"format/shopper",
+			"categories",
+			"__categories",
+			"Products",
+			"__time_expiry",
+			"broker/",
+			"offers",
+			"\"reserve_",
+			"for",
+			"reserve_c",
+			"sender",
+			"__sender_id",
+			"shopper_id",
+			"shopper",
+			"redeem_coup",
+			"coupons",
+			"categories",
+			"reserve_",
+			"broker_send",
+			"broker_",
+			"categor",
+			"category",
+			"vote_",
+			"location",
+			":address",
+			" address_",
+			"address_",
+			"result",
+			"redeem_",
+			"grabbed",
+			"options.",
+			"createUser",
+			"shopper",
+			"__shopper_id",
+			"__shopper_id ",
+			"coupons\"",
+			"reserve",
+			"reserve_",
+			"reserve",
+			"re",
+			"reserve",
+			"reserve_",
+			"number",
+			"coupons\"",
+			"body",
+			"UPC",
+			"reserve_",
+			"redeem_",
+			"redeem",
+			"create_",
+			"coupons\"",
+			"coupons_",
+			"coupons",
+			"redeem_",
+			"redemptions",
+			"create_",
+			"reserve_",
+			"create_",
+			"create",
+			"unable to send",
+			"update",
+			"vendors",
+			"description",
+			"coupons",
+			"/coupons",
+			"redemptions",
+			"coupons\"",
+			"coupons)",
+			"coupons",
+			"reserve_",
+			"create_coup",
+			"reserve_",
+			"/reserve",
+			"coupons",
+			"create",
+			"coupons",
+			"create",
+			"unexpired",
+			"broker",
+			"format/coupon",
+			"redeem",
+			"__redeemed",
+			"$ne",
+			"coupons",
+			"eachcoup",
+			"__vote[index]",
+			"eachcoup.",
+			"__vote",
+			"coup_ids",
+			"response",
+			"__fields",
+			"modifier",
+			"accounts",
+			"redeem",
+			"redem",
+			"redemtions",
+			"redemptions",
+			"redeem",
+			"redemptions",
+			"base_account",
+			"coupons",
+			"vote/coupon",
+			"true",
+			"coupons",
+			"base_accounts",
+			"reserve_cou",
+			"coupons",
+			"search",
+			"vendors",
+			"quantity",
+			"redeem",
+			"broker",
+			"coupons",
+			"create",
+			"coupons",
+			"reserve",
+			"redempt",
+			"redeptio",
+			"redeemer",
+			"redeemers",
+			"vote_coupon",
+			"vote",
+			"redeem",
+			"delete",
+			"remove"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"options.format"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Sketches/mices/Master/mice_stamp2.ino",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "libaries/libWiTMon/ADE7758.h",
+					"settings":
+					{
+						"buffer_size": 3482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3441,
+								3441
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "libaries/libWiTMon/ADE7758.cpp",
+					"settings":
+					{
+						"buffer_size": 4420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								207,
+								213
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "libaries/libWiTMon/spi.cpp",
+					"settings":
+					{
+						"buffer_size": 1988,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1336,
+								1336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 541.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "libaries/libWiTMon/spi.h",
+					"settings":
+					{
+						"buffer_size": 2488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2478,
+								2478
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 632.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "libaries/libWiTMon/pins.h",
+					"settings":
+					{
+						"buffer_size": 1076,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								165,
+								165
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Program Files (x86)/Arduino/libraries/SPI/SPI.cpp",
+					"settings":
+					{
+						"buffer_size": 1734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1460,
+								1460
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 234.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Program Files (x86)/Arduino/libraries/SPI/SPI.h",
+					"settings":
+					{
+						"buffer_size": 1611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1355,
+								1602
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 312.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "libaries/libWiTMon/cc1101.cpp",
+					"settings":
+					{
+						"buffer_size": 14732,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "libaries/libWiTMon/cc1101.h",
+					"settings":
+					{
+						"buffer_size": 19090,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								980,
+								980
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true
+}
