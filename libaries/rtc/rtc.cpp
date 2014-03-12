@@ -12,31 +12,82 @@
 #endif
 
 #define DS1307_ADDRESS 0x68
-#define SECONDS_PER_DAY 86400L
 
+#define SECONDS_PER_DAY 86400L
 #define SECONDS_FROM_1970_TO_2000 946684800
 
+const uint8_t daysInMonth [] PROGMEM = { 31,28,31,30,31,30,31,31,30,31,30,31 };
 
-
-
-/*
-TSTAMP::TSTAMP(uint32_t t =0){
-
+//Utility Codes
+static uint16_t date2days(uint16_t y, uint8_t m, uint8_t d) {
+    if (y >= 2000)
+        y -= 2000;
+    uint16_t days = d;
+    for (uint8_t i = 1; i < m; ++i)
+        days += pgm_read_byte(daysInMonth + i - 1);
+    if (m > 2 && y % 4 == 0)
+        ++days;
+    return days + 365 * y + (y + 3) / 4 - 1;
 }
-*/
 
+static long time2long(uint16_t days, uint8_t h, uint8_t m, uint8_t s) {
+    return ((days * 24L + h) * 60 + m) * 60 + s;
+}
+
+
+//*******************************TSTAMP Class*********************************************************//
 TSTAMP::TSTAMP(uint8_t year, uint8_t month, uint8_t day,uint8_t hour =0, uint8_t min =0, uint8_t sec =0){
 		ss = sec;		//00-59
 		mm = min;		//00-59
-		hr = hour;		//00-23
+		hh = hour;		//00-23
 		dd = 0;			//01-07
 		d = day;		//01-31
 		m = month;		//01-12
 		y = year;		//00-99	
 				
-	}
+}
+	
+TSTAMP::TSTAMP(uint32_t t){
 		
-//*******************DS1307 class*****************************************************//
+	t -= SECONDS_FROM_1970_TO_2000;    // bring to 2000 timestamp from 1970
+
+    ss = t % 60;
+    t /= 60;
+    mm = t % 60;
+    t /= 60;
+    hh = t % 24;
+    uint16_t days = t / 24;
+    uint8_t leap;
+    for (y = 0; ; ++y) {
+        leap = y % 4 == 0;
+        if (days < 365 + leap)
+            break;
+        days -= 365 + leap;
+    }
+    for (m = 1; ; ++m) {
+        uint8_t daysPerMonth = pgm_read_byte(daysInMonth + m - 1);
+        if (leap && m == 2)
+            ++daysPerMonth;
+        if (days < daysPerMonth)
+            break;
+        days -= daysPerMonth;
+    }
+	dd = 0;
+    d = days + 1;
+
+}
+
+uint32_t TSTAMP::unixtime(void) const {
+  uint32_t t;
+  uint16_t days = date2days(y, m, d);
+  t = time2long(days, hh, mm, ss);
+  t += SECONDS_FROM_1970_TO_2000;  // seconds from 1970 to 2000
+
+  return t;
+}
+	
+	
+//*************************DS1307 class*******************************//
 static uint8_t bcd2bin (uint8_t val) { return val - 6 * (val >> 4); }
 static uint8_t bin2bcd (uint8_t val) { return val + 6 * (val / 10); }
 
@@ -61,7 +112,7 @@ void DS1307::adjust(const TSTAMP& ts) {
     WIRE.write(0);
     WIRE.write(bin2bcd(ts.ss));
     WIRE.write(bin2bcd(ts.mm));
-    WIRE.write(bin2bcd(ts.hr));
+    WIRE.write(bin2bcd(ts.hh));
     WIRE.write(bin2bcd(0));
     WIRE.write(bin2bcd(ts.d));
     WIRE.write(bin2bcd(ts.m));

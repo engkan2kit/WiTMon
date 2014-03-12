@@ -6,19 +6,23 @@ class TSTAMP{
 	public:	
 	
 		//Constructor, w/ POSIX time as a parameter
-	    //TSTAMP (uint32_t t =0);
+	    TSTAMP (uint32_t t =0);
 		
-		//Constructor
+		//Constructor given y,m,d,hh,mm,ss
 		TSTAMP (uint8_t year, uint8_t month, uint8_t day,
                 uint8_t hour, uint8_t min, uint8_t sec);
 				
 		uint8_t ss;		//00-59
 		uint8_t mm;		//00-59
-		uint8_t hr;		//00-23
+		uint8_t hh;		//00-23
 		uint8_t dd;		//01-07
 		uint8_t d;		//01-31
 		uint8_t m;		//01-12
 		uint8_t y;		//00-99
+		
+		//methods
+		//returns unix time
+		uint32_t unixtime(void) const;
 };
 
 class DS1307{
