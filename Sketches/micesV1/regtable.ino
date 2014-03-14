@@ -1,4 +1,6 @@
 /**
+ * regtable
+ *
  * Copyright (c) 2011 Daniel Berenguer <dberenguer@usapiens.com>
  * 
  * This file is part of the panStamp project.
@@ -19,48 +21,41 @@
  * USA
  * 
  * Author: Daniel Berenguer
- * Creation date: 03/03/2011
+ * Creation date: 12/28/2011
  */
 
-#include "spi.h"
+#include <EEPROM.h>
+#include "product.h"
+#include "panstamp.h"
+#include "regtable.h"
 
 /**
- * init
- * 
- * SPI initialization
+ * Declaration of common callback functions
  */
-void SPI::init() 
-{
-  digitalWrite(SPI_SS, HIGH);
-  
-  // Configure SPI pins
-  pinMode(SPI_SS, OUTPUT);
-  pinMode(SPI_MOSI, OUTPUT);
-  pinMode(SPI_MISO, INPUT);
-  pinMode(SPI_SCK, OUTPUT);
-
-  digitalWrite(SPI_SCK, HIGH);
-  digitalWrite(SPI_MOSI, LOW);
-
-  // SPI speed = clk/4
-  SPCR = _BV(SPE) | _BV(MSTR);
-}
+DECLARE_COMMON_CALLBACKS()
 
 /**
- * send
- * 
- * Send byte via SPI
- * 
- * 'value'	Value to be sent
- * 
- * Return:
- * 	Response received from SPI slave
+ * Definition of common registers
  */
-byte SPI::send(byte value) 
-{
-  SPDR = value;                          // Transfer byte via SPI
-  wait_Spi();                            // Wait until SPI operation is terminated
+DEFINE_COMMON_REGISTERS()
 
-  return SPDR;
-}
+/*
+ * Definition of custom registers
+ */
+// Your custom registers come here
 
+/**
+ * Initialize table of registers
+ */
+DECLARE_REGISTERS_START()
+  // Put here pointers to your custom registers
+DECLARE_REGISTERS_END()
+
+/**
+ * Definition of common getter/setter callback functions
+ */
+DEFINE_COMMON_CALLBACKS()
+
+/**
+ * Definition of custom getter/setter callback functions
+ */

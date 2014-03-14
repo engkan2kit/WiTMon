@@ -25,9 +25,8 @@
 #ifndef _NVOLAT_H
 #define _NVOLAT_H
 
-//#include "Arduino.h"
+#include "Arduino.h"
 #include <EEPROM.h>
-#include "config.h"
 
 /**
  * EEPROM addresses
@@ -35,20 +34,9 @@
 #define EEPROM_FREQ_CHANNEL       0x00   // 1-byte register
 #define EEPROM_NOT_USED           0x01   // 1-byte register
 #define EEPROM_SYNC_WORD          0x02   // 2-byte register
-#define EEPROM_DEVICE_ADDR        0x04   // 1 or 2 byte register
-#define EEPROM_TX_INTERVAL        0x06   // 2-byte register
-#define EEPROM_FIRST_CUSTOM       0x20	 //	Not Used
-#define EEPROM_POLE_ID			  0x21	 // 1-byte pole ID
-//#define EEPROM_POLE_ID_		  0x22	 // Reserve for Pole id extended addresing schema
-#define EEPROM_LOCATION			  0x23	 // 8-Byte Latitude,Longitude in floating point (BE)
+#define EEPROM_DEVICE_ADDR        0x04   // 1-byte register
+#define EEPROM_TX_INTERVAL        0x05   // 2-byte register
 
+#define EEPROM_FIRST_CUSTOM       0x20
 
-
-
-#ifdef SWAP_EXTENDED_ADDRESS
-#define EEPROM_DEVICE_ADDRESS     EEPROM_DEVICE_ADDR
-#else
-#define EEPROM_DEVICE_ADDRESS     EEPROM_DEVICE_ADDR + 1
 #endif
-#endif
-

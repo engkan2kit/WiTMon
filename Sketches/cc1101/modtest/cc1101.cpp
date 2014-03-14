@@ -53,7 +53,7 @@
  */
 CC1101::CC1101(void)
 {
-  paTableByte = PA_LongDistance;            // Priority =PA_LongDistance
+  paTableByte = PA_LowPower;            // Priority = Low power
 }
 
 /**
@@ -222,8 +222,8 @@ void CC1101::setDefaultRegs(void)
   writeReg(CC1101_FSCTRL1,  CC1101_DEFVAL_FSCTRL1);
   writeReg(CC1101_FSCTRL0,  CC1101_DEFVAL_FSCTRL0);
 
-  // Set default carrier frequency = 433 MHz
-  setCarrierFreq(CFREQ_433);
+  // Set default carrier frequency = 868 MHz
+  setCarrierFreq(CFREQ_868);
 
   writeReg(CC1101_MDMCFG4,  CC1101_DEFVAL_MDMCFG4);
   writeReg(CC1101_MDMCFG3,  CC1101_DEFVAL_MDMCFG3);
@@ -266,6 +266,8 @@ void CC1101::setDefaultRegs(void)
 void CC1101::init(void) 
 {
   spi.init();                           // Initialize SPI interface
+  //spi.setClockDivider(SPI_CLOCK_DIV16);
+  //spi.setBitOrder(MSBFIRST);
   pinMode(GDO0, INPUT);                 // Config GDO0 as input
 
   reset();                              // Reset CC1101
@@ -330,7 +332,7 @@ void CC1101::setDevAddress(byte addr, bool save)
     devAddress = addr;
     // Save in EEPROM
     if (save)
-      EEPROM.write(EEPROM_DEVICE_ADDR+1, addr);  
+      EEPROM.write(EEPROM_DEVICE_ADDR, addr);  
   }
 }
 
@@ -370,15 +372,15 @@ void CC1101::setCarrierFreq(byte freq)
       writeReg(CC1101_FREQ1,  CC1101_DEFVAL_FREQ1_915);
       writeReg(CC1101_FREQ0,  CC1101_DEFVAL_FREQ0_915);
       break;
-    case CFREQ_868:
-      writeReg(CC1101_FREQ2,  CC1101_DEFVAL_FREQ2_868);
-      writeReg(CC1101_FREQ1,  CC1101_DEFVAL_FREQ1_868);
-      writeReg(CC1101_FREQ0,  CC1101_DEFVAL_FREQ0_868);
-      break;
-    default:
+    case CFREQ_433:
       writeReg(CC1101_FREQ2,  CC1101_DEFVAL_FREQ2_433);
       writeReg(CC1101_FREQ1,  CC1101_DEFVAL_FREQ1_433);
       writeReg(CC1101_FREQ0,  CC1101_DEFVAL_FREQ0_433);
+      break;
+    default:
+      writeReg(CC1101_FREQ2,  CC1101_DEFVAL_FREQ2_868);
+      writeReg(CC1101_FREQ1,  CC1101_DEFVAL_FREQ1_868);
+      writeReg(CC1101_FREQ0,  CC1101_DEFVAL_FREQ0_868);
       break;
   }
    
@@ -407,7 +409,7 @@ void CC1101::setRegsFromEeprom(void)
   if (((arrV[0] != 0x00) && (arrV[0] != 0xFF)) || ((arrV[1] != 0x00) && (arrV[1] != 0xFF)))
     setSyncWord(arrV[0], arrV[1], false);
   // Read device address from EEPROM
-  bVal = EEPROM.read(EEPROM_DEVICE_ADDR+1);
+  bVal = EEPROM.read(EEPROM_DEVICE_ADDR);
   // Set device address
   if (bVal > 0)
     setDevAddress(bVal, false);
@@ -420,7 +422,7 @@ void CC1101::setRegsFromEeprom(void)
  */
 void CC1101::setPowerDownState() 
 {
-  // Coming from RX state, we need to enter the IDLE state first
+  // Comming from RX state, we need to enter the IDLE state first
   cmdStrobe(CC1101_SIDLE);
   // Enter Power-down state
   cmdStrobe(CC1101_SPWD);
@@ -515,22 +517,17 @@ byte CC1101::receiveData(CCPACKET * packet)
 {
   byte val;
   byte rxBytes = readStatusReg(CC1101_RXBYTES);
-  //Serial.print("db0: "); //for debugging
+
   // Any byte waiting to be read and no overflow?
-  //Serial.println(rxBytes,HEX); //for debugging
   if (rxBytes & 0x7F && !(rxBytes & 0x80))
   {
-    //Serial.println("db1"); //for debugging
     // Read data length
     packet->length = readConfigReg(CC1101_RXFIFO);
     // If packet is too long
     if (packet->length > CC1101_DATA_LEN)
-	  
       packet->length = 0;   // Discard packet
     else
     {
-	
-	  //Serial.println("db2"); //for debugging
       // Read data packet
       readBurstReg(packet->data, CC1101_RXFIFO, packet->length);
       // Read RSSI

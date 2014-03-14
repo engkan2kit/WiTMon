@@ -1,4 +1,6 @@
 /**
+ * product.h
+ *
  * Copyright (c) 2011 Daniel Berenguer <dberenguer@usapiens.com>
  * 
  * This file is part of the panStamp project.
@@ -19,48 +21,31 @@
  * USA
  * 
  * Author: Daniel Berenguer
- * Creation date: 03/03/2011
+ * Creation date: 12/28/2011
  */
 
-#include "spi.h"
+#ifndef _PRODUCT_H
+#define _PRODUCT_H
 
 /**
- * init
- * 
- * SPI initialization
+ * Hardware version
  */
-void SPI::init() 
-{
-  digitalWrite(SPI_SS, HIGH);
-  
-  // Configure SPI pins
-  pinMode(SPI_SS, OUTPUT);
-  pinMode(SPI_MOSI, OUTPUT);
-  pinMode(SPI_MISO, INPUT);
-  pinMode(SPI_SCK, OUTPUT);
-
-  digitalWrite(SPI_SCK, HIGH);
-  digitalWrite(SPI_MOSI, LOW);
-
-  // SPI speed = clk/4
-  SPCR = _BV(SPE) | _BV(MSTR);
-}
+#define HARDWARE_VERSION        0x00000001
 
 /**
- * send
- * 
- * Send byte via SPI
- * 
- * 'value'	Value to be sent
- * 
- * Return:
- * 	Response received from SPI slave
+ * Firmware version
  */
-byte SPI::send(byte value) 
-{
-  SPDR = value;                          // Transfer byte via SPI
-  wait_Spi();                            // Wait until SPI operation is terminated
+#define FIRMWARE_VERSION        0x00000001
 
-  return SPDR;
-}
+/**
+ * Manufacturer SWAP ID
+ */
+#define SWAP_MANUFACT_ID        0x0000002B
+
+/**
+ * Product SWAP ID
+ */
+#define SWAP_PRODUCT_ID         0x00000001
+
+#endif
 

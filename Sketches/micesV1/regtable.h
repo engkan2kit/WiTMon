@@ -1,4 +1,6 @@
 /**
+ * regtable.h
+ *
  * Copyright (c) 2011 Daniel Berenguer <dberenguer@usapiens.com>
  * 
  * This file is part of the panStamp project.
@@ -19,48 +21,21 @@
  * USA
  * 
  * Author: Daniel Berenguer
- * Creation date: 03/03/2011
+ * Creation date: 12/28/2011
  */
 
-#include "spi.h"
+#ifndef _REGTABLE_H
+#define _REGTABLE_H
+
+#include "Arduino.h"
+#include "register.h"
+#include "commonregs.h"
 
 /**
- * init
- * 
- * SPI initialization
+ * Register indexes
  */
-void SPI::init() 
-{
-  digitalWrite(SPI_SS, HIGH);
-  
-  // Configure SPI pins
-  pinMode(SPI_SS, OUTPUT);
-  pinMode(SPI_MOSI, OUTPUT);
-  pinMode(SPI_MISO, INPUT);
-  pinMode(SPI_SCK, OUTPUT);
+DEFINE_REGINDEX_START()
+  // First index here = 11
+DEFINE_REGINDEX_END()
 
-  digitalWrite(SPI_SCK, HIGH);
-  digitalWrite(SPI_MOSI, LOW);
-
-  // SPI speed = clk/4
-  SPCR = _BV(SPE) | _BV(MSTR);
-}
-
-/**
- * send
- * 
- * Send byte via SPI
- * 
- * 'value'	Value to be sent
- * 
- * Return:
- * 	Response received from SPI slave
- */
-byte SPI::send(byte value) 
-{
-  SPDR = value;                          // Transfer byte via SPI
-  wait_Spi();                            // Wait until SPI operation is terminated
-
-  return SPDR;
-}
-
+#endif

@@ -1,4 +1,5 @@
 /**
+ * nvolat.h
  * Copyright (c) 2011 Daniel Berenguer <dberenguer@usapiens.com>
  * 
  * This file is part of the panStamp project.
@@ -6,7 +7,7 @@
  * panStamp  is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
- * any later version.
+ * (at your option) any later version.
  * 
  * panLoader is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -19,48 +20,22 @@
  * USA
  * 
  * Author: Daniel Berenguer
- * Creation date: 03/03/2011
+ * Creation date: 07/03/2011
  */
 
-#include "spi.h"
+#ifndef _NVOLAT_H
+#define _NVOLAT_H
+
+#include "Arduino.h"
+#include <EEPROM.h>
 
 /**
- * init
- * 
- * SPI initialization
+ * EEPROM addresses
  */
-void SPI::init() 
-{
-  digitalWrite(SPI_SS, HIGH);
-  
-  // Configure SPI pins
-  pinMode(SPI_SS, OUTPUT);
-  pinMode(SPI_MOSI, OUTPUT);
-  pinMode(SPI_MISO, INPUT);
-  pinMode(SPI_SCK, OUTPUT);
+#define EEPROM_FREQ_CHANNEL      0x00   // 1-byte register
+#define EEPROM_SECU_OPTION       0x01   // 1-byte register
+#define EEPROM_SYNC_WORD         0x02   // 2-byte register
+#define EEPROM_DEVICE_ADDR       0x04   // 1-byte register
+#define EEPROM_TX_INTERVAL       0x05   // 2-byte register
 
-  digitalWrite(SPI_SCK, HIGH);
-  digitalWrite(SPI_MOSI, LOW);
-
-  // SPI speed = clk/4
-  SPCR = _BV(SPE) | _BV(MSTR);
-}
-
-/**
- * send
- * 
- * Send byte via SPI
- * 
- * 'value'	Value to be sent
- * 
- * Return:
- * 	Response received from SPI slave
- */
-byte SPI::send(byte value) 
-{
-  SPDR = value;                          // Transfer byte via SPI
-  wait_Spi();                            // Wait until SPI operation is terminated
-
-  return SPDR;
-}
-
+#endif

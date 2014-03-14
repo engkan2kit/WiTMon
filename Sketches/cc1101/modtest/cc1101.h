@@ -166,27 +166,26 @@ enum RFSTATE
 #define CC1101_RCCTRL1_STATUS    0x3C        // Last RC Oscillator Calibration Result
 #define CC1101_RCCTRL0_STATUS    0x3D        // Last RC Oscillator Calibration Result 
 
-
 /**
  * CC1101 configuration registers - Default values extracted from SmartRF Studio
  *
  * Configuration:
  *
- * Deviation = 5.157471 
- * Base frequency = 433.999969 
- * Carrier frequency = 433.999969
+ * Deviation = 20.629883 
+ * Base frequency = 867.999939 
+ * Carrier frequency = 867.999939 
  * Channel number = 0 
- * Carrier frequency = 433.999969
+ * Carrier frequency = 867.999939 
  * Modulated = true 
  * Modulation format = GFSK 
  * Manchester enable = false
  * Data whitening = off
  * Sync word qualifier mode = 30/32 sync word bits detected 
  * Preamble count = 4 
- * Channel spacing = 199.951172
- * Carrier frequency = 433.999969
- * Data rate = 2.39897
- * RX filter BW = 58.035714
+ * Channel spacing = 199.951172 
+ * Carrier frequency = 867.999939 
+ * Data rate = 38.3835 Kbps
+ * RX filter BW = 101.562500 
  * Data format = Normal mode 
  * Length config = Variable packet length mode. Packet length configured by the first byte after sync word 
  * CRC enable = true 
@@ -197,14 +196,14 @@ enum RFSTATE
  * LQI values, as well as CRC OK
  * CRC autoflush = false 
  * PA ramping = false 
- * TX power = 0
+ * TX power = 12
  * GDO0 mode = Asserts when sync word has been sent / received, and de-asserts at the end of the packet.
  * In RX, the pin will also de-assert when a packet is discarded due to address or maximum length filtering
  * or when the radio enters RXFIFO_OVERFLOW state. In TX the pin will de-assert if the TX FIFO underflows
  * Settings optimized for low current consumption
  */
-
-#define CC1101_DEFVAL_IOCFG2     0x29        // GDO2 Output Pin Configuration
+//#define CC1101_DEFVAL_IOCFG2     0x29        // GDO2 Output Pin Configuration
+#define CC1101_DEFVAL_IOCFG2     0x2E        // GDO2 Output Pin Configuration
 #define CC1101_DEFVAL_IOCFG1     0x2E        // GDO1 Output Pin Configuration
 #define CC1101_DEFVAL_IOCFG0     0x06        // GDO0 Output Pin Configuration
 #define CC1101_DEFVAL_FIFOTHR    0x07        // RX FIFO and TX FIFO Thresholds
@@ -217,11 +216,6 @@ enum RFSTATE
 #define CC1101_DEFVAL_CHANNR     0x00        // Channel Number
 #define CC1101_DEFVAL_FSCTRL1    0x08        // Frequency Synthesizer Control
 #define CC1101_DEFVAL_FSCTRL0    0x00        // Frequency Synthesizer Control
-
-// Carrier freequency = 433 Mhz
-#define CC1101_DEFVAL_FREQ2_433  0x10        // Frequency Control Word, High Byte
-#define CC1101_DEFVAL_FREQ1_433  0xA7        // Frequency Control Word, Middle Byte
-#define CC1101_DEFVAL_FREQ0_433  0x62        // Frequency Control Word, Low Byte
 // Carrier frequency = 868 MHz
 #define CC1101_DEFVAL_FREQ2_868  0x21        // Frequency Control Word, High Byte
 #define CC1101_DEFVAL_FREQ1_868  0x62        // Frequency Control Word, Middle Byte
@@ -230,14 +224,19 @@ enum RFSTATE
 #define CC1101_DEFVAL_FREQ2_915  0x22        // Frequency Control Word, High Byte
 #define CC1101_DEFVAL_FREQ1_915  0xB1        // Frequency Control Word, Middle Byte
 #define CC1101_DEFVAL_FREQ0_915  0x3B        // Frequency Control Word, Low Byte
+// Carrier frequency = 433 MHz
+#define CC1101_DEFVAL_FREQ2_433  0x10        // Frequency Control Word, High Byte
+#define CC1101_DEFVAL_FREQ1_433  0xA7        // Frequency Control Word, Middle Byte
+#define CC1101_DEFVAL_FREQ0_433  0x62        // Frequency Control Word, Low Byte
 
-#define CC1101_DEFVAL_MDMCFG4    0xC8        // Modem Configuration C8
+#define CC1101_DEFVAL_MDMCFG4    0xCA        // Modem Configuration
 #define CC1101_DEFVAL_MDMCFG3    0x83        // Modem Configuration
 #define CC1101_DEFVAL_MDMCFG2    0x93        // Modem Configuration
 #define CC1101_DEFVAL_MDMCFG1    0x22        // Modem Configuration
 #define CC1101_DEFVAL_MDMCFG0    0xF8        // Modem Configuration
 #define CC1101_DEFVAL_DEVIATN    0x35        // Modem Deviation Setting
 #define CC1101_DEFVAL_MCSM2      0x07        // Main Radio Control State Machine Configuration
+//#define CC1101_DEFVAL_MCSM1      0x30        // Main Radio Control State Machine Configuration
 #define CC1101_DEFVAL_MCSM1      0x20        // Main Radio Control State Machine Configuration
 #define CC1101_DEFVAL_MCSM0      0x18        // Main Radio Control State Machine Configuration
 #define CC1101_DEFVAL_FOCCFG     0x16        // Frequency Offset Compensation Configuration
@@ -317,7 +316,7 @@ class CC1101
      * 'buffer'	Data to be writen
      * 'len'	Data length
      */
-    void writeBurstReg(byte regAddr, byte* buffer, byte len);
+    //void writeBurstReg(byte regAddr, byte* buffer, byte len);
 
     /**
      * readBurstReg
@@ -381,6 +380,8 @@ class CC1101
      * Class constructor
      */
     CC1101(void);
+	
+	void writeBurstReg(byte regAddr, byte* buffer, byte len);
 
     /**
      * cmdStrobe

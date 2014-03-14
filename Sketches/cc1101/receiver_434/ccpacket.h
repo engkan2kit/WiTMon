@@ -22,45 +22,50 @@
  * Creation date: 03/03/2011
  */
 
-#include "spi.h"
+#ifndef _CCPACKET_H
+#define _CCPACKET_H
+
+#include "Arduino.h"
 
 /**
- * init
- * 
- * SPI initialization
+ * Buffer and data lengths
  */
-void SPI::init() 
-{
-  digitalWrite(SPI_SS, HIGH);
-  
-  // Configure SPI pins
-  pinMode(SPI_SS, OUTPUT);
-  pinMode(SPI_MOSI, OUTPUT);
-  pinMode(SPI_MISO, INPUT);
-  pinMode(SPI_SCK, OUTPUT);
-
-  digitalWrite(SPI_SCK, HIGH);
-  digitalWrite(SPI_MOSI, LOW);
-
-  // SPI speed = clk/4
-  SPCR = _BV(SPE) | _BV(MSTR);
-}
+#define CC1101_BUFFER_LEN        64
+#define CC1101_DATA_LEN          CC1101_BUFFER_LEN - 3
 
 /**
- * send
+ * Class: CCPACKET
  * 
- * Send byte via SPI
- * 
- * 'value'	Value to be sent
- * 
- * Return:
- * 	Response received from SPI slave
+ * Description:
+ * CC1101 data packet class
  */
-byte SPI::send(byte value) 
+class CCPACKET
 {
-  SPDR = value;                          // Transfer byte via SPI
-  wait_Spi();                            // Wait until SPI operation is terminated
+  public:
+    /**
+     * Data length
+     */
+    byte length;
 
-  return SPDR;
-}
+    /**
+     * Data buffer
+     */
+    byte data[CC1101_DATA_LEN];
 
+    /**
+     * CRC OK flag
+     */
+    boolean crc_ok;
+
+    /**
+     * Received Strength Signal Indication
+     */
+    byte rssi;
+
+    /**
+     * Link Quality Index
+     */
+    byte lqi;
+};
+
+#endif

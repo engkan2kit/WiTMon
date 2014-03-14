@@ -94,9 +94,9 @@ void isrGDO0event(void)
 {
   // Disable interrupt
   disableIRQ_GDO0();
-
   if (panstamp.cc1101.rfState == RFSTATE_RX)
   {
+    //Serial.println("RCV0"); //for debugging
     static CCPACKET ccPacket;
     static SWPACKET swPacket;
     REGISTER *reg;
@@ -104,8 +104,10 @@ void isrGDO0event(void)
 
     if (panstamp.cc1101.receiveData(&ccPacket) > 0)
     {
+	  //Serial.println("RCV1"); //for debugging
       if (ccPacket.crc_ok)
       {
+	   //Serial.println("RCV2"); //for debugging
         swPacket = SWPACKET(ccPacket);
 
         #ifdef SWAP_EXTENDED_ADDRESS
@@ -124,13 +126,16 @@ void isrGDO0event(void)
             // OK, then incoming packets must be encrypted too
             if (!(swPacket.security & 0x02))
               eval = false;
+			  //Serial.println("False"); //for debugging
           }
         }
-        else
+        else{
           eval = false;
-
+		  
+		}
         if (eval)
         {
+		
           // Function
           switch(swPacket.function)
           {
