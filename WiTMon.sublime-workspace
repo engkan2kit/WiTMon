@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"set",
+				"setDataMode"
+			],
+			[
 				"SPI",
 				"ADE7758SPI"
 			],
@@ -510,92 +514,56 @@
 			[
 				"foll",
 				"followValue"
-			],
-			[
-				"follw",
-				"followable"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Sketches/mices/Master/mice_stamp2.ino",
+			"file": "Sketches/mices/master/master.ino",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "libaries/libWiTMon/ADE7758.h",
-			"settings":
-			{
-				"buffer_size": 3482,
+				"buffer_size": 543,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "libaries/libWiTMon/ADE7758.cpp",
+			"file": "Sketches/mices/master/commonregs.h",
 			"settings":
 			{
-				"buffer_size": 4420,
+				"buffer_size": 12893,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "libaries/libWiTMon/spi.cpp",
+			"file": "Sketches/mices/master/register.cpp",
 			"settings":
 			{
-				"buffer_size": 1988,
+				"buffer_size": 2417,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "libaries/libWiTMon/spi.h",
+			"file": "Sketches/mices/master/register.h",
 			"settings":
 			{
-				"buffer_size": 2488,
+				"buffer_size": 3894,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "libaries/libWiTMon/pins.h",
+			"file": "Sketches/mices/master/regtable.h",
 			"settings":
 			{
-				"buffer_size": 1076,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Program Files (x86)/Arduino/libraries/SPI/SPI.cpp",
-			"settings":
-			{
-				"buffer_size": 1734,
+				"buffer_size": 1117,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Program Files (x86)/Arduino/libraries/SPI/SPI.h",
+			"file": "Sketches/mices/master/regtable.ino",
 			"settings":
 			{
-				"buffer_size": 1611,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "libaries/libWiTMon/cc1101.cpp",
-			"settings":
-			{
-				"buffer_size": 14732,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "libaries/libWiTMon/cc1101.h",
-			"settings":
-			{
-				"buffer_size": 19090,
+				"buffer_size": 1506,
 				"line_ending": "Unix"
 			}
 		}
@@ -624,8 +592,17 @@
 	},
 	"file_history":
 	[
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/spi.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/cc1101.h",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/cc1101.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/pins.h",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/spi.h",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/ADE7758.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/ADE7758.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/master/slave.ino",
 		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.h",
 		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.cpp",
+		"/F/ARDUINO/WiTMon/Sketches/mices/Master/mice_stamp2.ino",
 		"/F/ARDUINO/WiTMon/libaries/panstamp/cc1101.cpp",
 		"/F/ARDUINO/WiTMon/libaries/panstamp/spi.h",
 		"/F/ARDUINO/WiTMon/libaries/panstamp/spi.cpp",
@@ -742,16 +719,7 @@
 		"/F/Work/MITM/Meteor/client/mainTemplate.js",
 		"/F/Work/MITM/Meteor/server/api/models/coupon/coupon.js",
 		"/F/Work/MITM/Meteor/schema/notifications.json",
-		"/F/Work/MITM/Meteor/server/api/accounts/accounts.js",
-		"/F/Work/MITM/Meteor/schema/base_accounts.json",
-		"/F/Work/MITM/Meteor/schema/redeemed_coupons.json",
-		"/F/Work/MITM/Meteor/schema/categories.json",
-		"/F/Work/MITM/Meteor/schema/coupons.json",
-		"/F/Work/MITM/Meteor/server/test/fixtures/fixtures.js",
-		"/F/Work/MITM/Meteor/server/publish.js",
-		"/F/Work/nodeddp/node_modules/ddp/lib/ddp-client.js",
-		"/F/Work/MITM/Meteor/server/server.js",
-		"/F/Work/MITM/Meteorssh/common/models/coupon/coupon.js"
+		"/F/Work/MITM/Meteor/server/api/accounts/accounts.js"
 	],
 	"find":
 	{
@@ -921,18 +889,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Sketches/mices/Master/mice_stamp2.ino",
+					"file": "Sketches/mices/master/master.ino",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 543,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								376,
+								338
 							]
 						],
 						"settings":
@@ -949,156 +917,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "libaries/libWiTMon/ADE7758.h",
+					"file": "Sketches/mices/master/commonregs.h",
 					"settings":
 					{
-						"buffer_size": 3482,
+						"buffer_size": 12893,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3441,
-								3441
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "libaries/libWiTMon/ADE7758.cpp",
-					"settings":
-					{
-						"buffer_size": 4420,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								207,
-								213
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "libaries/libWiTMon/spi.cpp",
-					"settings":
-					{
-						"buffer_size": 1988,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1336,
-								1336
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 541.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "libaries/libWiTMon/spi.h",
-					"settings":
-					{
-						"buffer_size": 2488,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2478,
-								2478
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 632.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "libaries/libWiTMon/pins.h",
-					"settings":
-					{
-						"buffer_size": 1076,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								165,
-								165
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/Program Files (x86)/Arduino/libraries/SPI/SPI.cpp",
-					"settings":
-					{
-						"buffer_size": 1734,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1460,
-								1460
+								1213,
+								1213
 							]
 						],
 						"settings":
@@ -1114,39 +944,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "/C/Program Files (x86)/Arduino/libraries/SPI/SPI.h",
+					"buffer": 2,
+					"file": "Sketches/mices/master/register.cpp",
 					"settings":
 					{
-						"buffer_size": 1611,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1355,
-								1602
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 312.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "libaries/libWiTMon/cc1101.cpp",
-					"settings":
-					{
-						"buffer_size": 14732,
+						"buffer_size": 2417,
 						"regions":
 						{
 						},
@@ -1164,25 +966,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 429.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "libaries/libWiTMon/cc1101.h",
+					"buffer": 3,
+					"file": "Sketches/mices/master/register.h",
 					"settings":
 					{
-						"buffer_size": 19090,
+						"buffer_size": 3894,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								980,
-								980
+								929,
+								929
 							]
 						],
 						"settings":
@@ -1192,7 +994,59 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 1326.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Sketches/mices/master/regtable.h",
+					"settings":
+					{
+						"buffer_size": 1117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Sketches/mices/master/regtable.ino",
+					"settings":
+					{
+						"buffer_size": 1506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 234.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

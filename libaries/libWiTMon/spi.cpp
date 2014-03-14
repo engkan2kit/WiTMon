@@ -23,7 +23,7 @@
  */
 
 #include "spi.h"
-
+#include "pins.h"
 /**
  * init
  * 
@@ -64,3 +64,47 @@ byte SPI::send(byte value)
   return SPDR;
 }
 
+void SPI::setBitOrder(uint8_t bitOrder)
+{
+  if(bitOrder == LSBFIRST) {
+    SPCR |= _BV(DORD);
+  } else {
+    SPCR &= ~(_BV(DORD));
+  }
+}
+
+void SPI::setDataMode(uint8_t mode)
+{
+  SPCR = (SPCR & ~SPI_MODE_MASK) | mode;
+}
+
+uint8_t SPI::getDataMode()
+{
+  return SPCR;
+}
+
+void SPI::setClockDivider(uint8_t rate)
+{
+  SPCR = (SPCR & ~SPI_CLOCK_MASK) | (rate & SPI_CLOCK_MASK);
+  SPSR = (SPSR & ~SPI_2XCLOCK_MASK) | ((rate >> 2) & SPI_2XCLOCK_MASK);
+}
+
+byte SPI::transfer(byte _data, uint8_t mode) {
+  byte ret,prevmode;
+  prevmode = getDataMode();
+  setDataMode(mode);
+  SPDR = _data;
+  while (!(SPSR & _BV(SPIF)))
+    ;
+  ret = SPDR;
+  setDataMode(prevmode);
+  return ret;
+}
+
+void SPI::attachInterrupt() {
+  SPCR |= _BV(SPIE);
+}
+
+void SPI::detachInterrupt() {
+  SPCR &= ~_BV(SPIE);
+}

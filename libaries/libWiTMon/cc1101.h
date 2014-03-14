@@ -27,6 +27,7 @@
 
 #include "Arduino.h"
 #include "spi.h"
+#include "pins.h"
 #include "ccpacket.h"
 
 /**
@@ -207,10 +208,10 @@ enum RFSTATE
 #define CC1101_DEFVAL_IOCFG2     0x29        // GDO2 Output Pin Configuration
 #define CC1101_DEFVAL_IOCFG1     0x2E        // GDO1 Output Pin Configuration
 #define CC1101_DEFVAL_IOCFG0     0x06        // GDO0 Output Pin Configuration
-#define CC1101_DEFVAL_FIFOTHR    0x07        // RX FIFO and TX FIFO Thresholds
+#define CC1101_DEFVAL_FIFOTHR    0x47        // RX FIFO and TX FIFO Thresholds
 #define CC1101_DEFVAL_SYNC1      0xB5        // Synchronization word, high byte
 #define CC1101_DEFVAL_SYNC0      0x47        // Synchronization word, low byte
-#define CC1101_DEFVAL_PKTLEN     0x3D        // Packet Length
+#define CC1101_DEFVAL_PKTLEN     0xFF        // Packet Length
 #define CC1101_DEFVAL_PKTCTRL1   0x06        // Packet Automation Control
 #define CC1101_DEFVAL_PKTCTRL0   0x05        // Packet Automation Control
 #define CC1101_DEFVAL_ADDR       0xFF        // Device Address
@@ -231,7 +232,7 @@ enum RFSTATE
 #define CC1101_DEFVAL_FREQ1_915  0xB1        // Frequency Control Word, Middle Byte
 #define CC1101_DEFVAL_FREQ0_915  0x3B        // Frequency Control Word, Low Byte
 
-#define CC1101_DEFVAL_MDMCFG4    0xC8        // Modem Configuration C8
+#define CC1101_DEFVAL_MDMCFG4    0xC8        // Modem Configuration
 #define CC1101_DEFVAL_MDMCFG3    0x83        // Modem Configuration
 #define CC1101_DEFVAL_MDMCFG2    0x93        // Modem Configuration
 #define CC1101_DEFVAL_MDMCFG1    0x22        // Modem Configuration
@@ -515,6 +516,8 @@ class CC1101
      */
     byte receiveData(CCPACKET *packet);
 };
+
+
 
 #endif
 
