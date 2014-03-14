@@ -47,6 +47,9 @@
  */
 #define LEDPIN  4
 
+
+void(* resetFunc) (void) = 0; //declare reset function @ address 0
+
 /**
  * isrINT0event
  *
@@ -130,7 +133,8 @@ void handleSerialCmd(char* command)
       else if (!strcmp(strSerial, AT_RESET))
       {
         Serial.println("OK");
-        swReset();
+        //swReset();
+        resetFunc();  //call reset
       }
       // Go to serial data mode
       else if (!strcmp(strSerial, AT_GOTO_DATAMODE))
@@ -240,6 +244,7 @@ void handleSerialCmd(char* command)
  */
 void setup()
 {
+
   pinMode(LEDPIN, OUTPUT);
   digitalWrite(LEDPIN, HIGH);
  

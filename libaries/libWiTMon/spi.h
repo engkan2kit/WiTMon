@@ -27,47 +27,25 @@
 
 #include "Arduino.h"
 
-/**
- * SPI pins -- Modified for GIZDUINO-X
- */
 
-#define SPI_SS   10     // PB0 = SPI_SS Pin_10
-#define SPI_MOSI 11     // PB2 = MOSI Pin_11
-#define SPI_MISO 12     // PB3 = MISO
-#define SPI_SCK  13     // PB1 = SCK
-#define GDO0     2     // PE4 = INT0
+#define SPI_CLOCK_DIV4 0x00
+#define SPI_CLOCK_DIV16 0x01
+#define SPI_CLOCK_DIV64 0x02
+#define SPI_CLOCK_DIV128 0x03
+#define SPI_CLOCK_DIV2 0x04
+#define SPI_CLOCK_DIV8 0x05
+#define SPI_CLOCK_DIV32 0x06
+//#define SPI_CLOCK_DIV64 0x07
 
-#define PORT_SPI_MISO  PINB
-#define BIT_SPI_MISO  3
+#define SPI_MODE0 0x00
+#define SPI_MODE1 0x04
+#define SPI_MODE2 0x08
+#define SPI_MODE3 0x0C
 
-#define PORT_SPI_SS  PORTB
-#define BIT_SPI_SS   0
+#define SPI_MODE_MASK 0x0C  // CPOL = bit 3, CPHA = bit 2 on SPCR
+#define SPI_CLOCK_MASK 0x03  // SPR1 = bit 1, SPR0 = bit 0 on SPCR
+#define SPI_2XCLOCK_MASK 0x01  // SPI2X = bit 0 on SPSR
 
-#define PORT_GDO0  PINE
-#define BIT_GDO0 4
-
-
-
-/**
- * SPI pins -- Modified for the mice board
- */
-
-/*
-#define SPI_SS   10     // PB2 = SPI_SS Pin_10
-#define SPI_MOSI 11     // PB3 = MOSI Pin_11
-#define SPI_MISO 12     // PB4 = MISO pin 12
-#define SPI_SCK  13     // PB5 = SCK pin 13
-#define GDO0     2     	// PD2 = INT0
-
-#define PORT_SPI_MISO  PINB
-#define BIT_SPI_MISO  4
-
-#define PORT_SPI_SS  PORTB
-#define BIT_SPI_SS   2
-
-#define PORT_GDO0  PIND
-#define BIT_GDO0  2
-*/
 
 /**
  * Macros
@@ -102,7 +80,36 @@ class SPI
      *  Response received from SPI slave
      */
     byte send(byte value);
+
+    inline static byte transfer(byte _data, uint8_t mode);
+
+    // SPI Configuration methods
+
+    inline static void attachInterrupt();
+    inline static void detachInterrupt(); // Default
+    static void end();
+
+    static void setBitOrder(uint8_t);
+    static void setDataMode(uint8_t);
+    static uint8_t getDataMode();
+    static void setClockDivider(uint8_t);
+
+
 };
+
+
+byte SPI::transfer(byte _data, uint8_t mode) {
+  byte ret,prevmode;
+  prevmode = getDataMode();
+  setDataMode(mode);
+  SPDR = _data;
+  while (!(SPSR & _BV(SPIF)))
+    ;
+  ret = SPDR;
+  setDataMode(prevmode);
+  return ret;
+}
+
 #endif
 
 

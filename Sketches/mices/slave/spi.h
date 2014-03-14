@@ -98,7 +98,17 @@ class SPI
 };
 
 
-
+byte SPI::transfer(byte _data, uint8_t mode) {
+  byte ret,prevmode;
+  prevmode = getDataMode();
+  setDataMode(mode);
+  SPDR = _data;
+  while (!(SPSR & _BV(SPIF)))
+    ;
+  ret = SPDR;
+  setDataMode(prevmode);
+  return ret;
+}
 
 #endif
 

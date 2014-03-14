@@ -7,7 +7,7 @@
  * SPI pins -- Modified for GIZDUINO-X
  */
 
-//#define MEGA
+#define MEGA
 
 
 

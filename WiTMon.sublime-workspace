@@ -520,50 +520,58 @@
 	"buffers":
 	[
 		{
-			"file": "Sketches/mices/master/master.ino",
+			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.cpp",
 			"settings":
 			{
-				"buffer_size": 543,
+				"buffer_size": 4555,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Sketches/mices/master/commonregs.h",
+			"file": "/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/pyswapdmtgui.py",
 			"settings":
 			{
-				"buffer_size": 12893,
+				"buffer_size": 1386,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Sketches/mices/master/register.cpp",
+			"file": "/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/SwapManager.py",
 			"settings":
 			{
-				"buffer_size": 2417,
+				"buffer_size": 6456,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Sketches/mices/master/register.h",
+			"file": "Sketches/mices/slave/panstamp.cpp",
 			"settings":
 			{
-				"buffer_size": 3894,
+				"buffer_size": 9804,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Sketches/mices/master/regtable.h",
+			"file": "/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/MainFrame.py",
 			"settings":
 			{
-				"buffer_size": 1117,
+				"buffer_size": 42523,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Sketches/mices/master/regtable.ino",
+			"file": "/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/WaitDialog.py",
 			"settings":
 			{
-				"buffer_size": 1506,
+				"buffer_size": 3524,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Python27/Lib/site-packages/swap/modem/SerialModem.py",
+			"settings":
+			{
+				"buffer_size": 11856,
 				"line_ending": "Unix"
 			}
 		}
@@ -592,16 +600,36 @@
 	},
 	"file_history":
 	[
+		"/I/panstamp/panstamp-read-only/python/pyswapdmt/src/settings.xml",
+		"/I/panstamp/panstamp-read-only/python/pyswapdmt/src/network.xml",
+		"/I/panstamp/panstamp-read-only/python/pyswapdmt/src/serial.xml",
+		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/readme.py",
+		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/SerialDialog.py",
+		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/NetworkDialog.py",
+		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/config/swapnet.json",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/pins.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/spi.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/spi.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/pins.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/ADE7758.cpp",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/spi.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.cpp",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/spi.h",
+		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.h",
+		"/F/ARDUINO/ADE7758/myADE7758/ADE7758.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/cc1101.cpp",
+		"/F/ARDUINO/WiTMon/Sketches/mices/master/master.ino",
+		"/F/ARDUINO/WiTMon/Sketches/mices/master/commonregs.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/master/regtable.ino",
+		"/F/ARDUINO/WiTMon/Sketches/mices/master/regtable.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/master/register.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/master/register.cpp",
 		"/F/ARDUINO/WiTMon/libaries/libWiTMon/spi.cpp",
 		"/F/ARDUINO/WiTMon/libaries/libWiTMon/cc1101.h",
-		"/F/ARDUINO/WiTMon/libaries/libWiTMon/cc1101.cpp",
-		"/F/ARDUINO/WiTMon/libaries/libWiTMon/pins.h",
 		"/F/ARDUINO/WiTMon/libaries/libWiTMon/spi.h",
 		"/F/ARDUINO/WiTMon/libaries/libWiTMon/ADE7758.cpp",
 		"/F/ARDUINO/WiTMon/libaries/libWiTMon/ADE7758.h",
 		"/F/ARDUINO/WiTMon/Sketches/mices/master/slave.ino",
-		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.h",
-		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.cpp",
 		"/F/ARDUINO/WiTMon/Sketches/mices/Master/mice_stamp2.ino",
 		"/F/ARDUINO/WiTMon/libaries/panstamp/cc1101.cpp",
 		"/F/ARDUINO/WiTMon/libaries/panstamp/spi.h",
@@ -699,27 +727,7 @@
 		"/F/ANDROID/Projects/addpkit/MeteorPartiesDDPClient/build.gradle",
 		"/F/Work/MITM/mjit/client/dashboard/templating/foralluserchangepass.js",
 		"/F/Work/MITM/mjit/client/dashboard/broker/brokermainviewTemplate.html",
-		"/F/Work/MITM/mjit/client/dashboard/broker/brokersendcouponsTemplate.js",
-		"/F/Work/MITM/mjit/client/mainTemplate.js",
-		"/F/Work/MITM/mjit/client/dashboard/manufacturer/addcouponTemplate.js",
-		"/F/Work/MITM/mjit/client/dashboard/manufacturer/addcouponTemplate.html",
-		"/F/Work/MITM/back/server.js",
-		"/F/Work/MITM/back/publish.js",
-		"/F/Work/MITM/Meteor/server/api/routes_api.js",
-		"/F/Work/MITM/Meteor/server/api/models/user/user.js",
-		"/F/Work/MITM/Meteor/server/api/models/shopper/shopper.js",
-		"/F/Work/MITM/Meteor/server/api/models/broker/broker.js",
-		"/F/Work/MITM/Meteor/schema/broker_coupons.json",
-		"/F/Work/MITM/Meteor/common/collections/definitions/apis/collections.js",
-		"/F/Work/MITM/Meteor/server/api/models/vendor/vendor.js",
-		"/F/Work/MITM/Meteor/server/api/models/manufacturer/manufacturer.js",
-		"/F/Work/MITM/Meteor/server/api/models/bank/bank.js",
-		"/F/Work/MITM/Meteor/server/api/models/product/product.js",
-		"/F/Work/MITM/Meteor/server/api/models/shopper/profiling.js",
-		"/F/Work/MITM/Meteor/client/mainTemplate.js",
-		"/F/Work/MITM/Meteor/server/api/models/coupon/coupon.js",
-		"/F/Work/MITM/Meteor/schema/notifications.json",
-		"/F/Work/MITM/Meteor/server/api/accounts/accounts.js"
+		"/F/Work/MITM/mjit/client/dashboard/broker/brokersendcouponsTemplate.js"
 	],
 	"find":
 	{
@@ -738,6 +746,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"goToCommandMode()",
+			"_wait_modem_start ",
+			"ATZ",
+			"pins.h",
 			"SPI",
 			"ADE7758",
 			"ADE7758_",
@@ -861,11 +873,7 @@
 			"redeptio",
 			"redeemer",
 			"redeemers",
-			"vote_coupon",
-			"vote",
-			"redeem",
-			"delete",
-			"remove"
+			"vote_coupon"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -884,29 +892,29 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Sketches/mices/master/master.ino",
+					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.cpp",
 					"settings":
 					{
-						"buffer_size": 543,
+						"buffer_size": 4555,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								376,
-								338
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -917,38 +925,10 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Sketches/mices/master/commonregs.h",
+					"file": "/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/pyswapdmtgui.py",
 					"settings":
 					{
-						"buffer_size": 12893,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1213,
-								1213
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 234.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Sketches/mices/master/register.cpp",
-					"settings":
-					{
-						"buffer_size": 2417,
+						"buffer_size": 1386,
 						"regions":
 						{
 						},
@@ -961,63 +941,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 429.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Sketches/mices/master/register.h",
-					"settings":
-					{
-						"buffer_size": 3894,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								929,
-								929
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1326.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Sketches/mices/master/regtable.h",
-					"settings":
-					{
-						"buffer_size": 1117,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1026,11 +950,95 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Sketches/mices/master/regtable.ino",
+					"buffer": 2,
+					"file": "/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/SwapManager.py",
 					"settings":
 					{
-						"buffer_size": 1506,
+						"buffer_size": 6456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1249,
+								1249
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 78.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Sketches/mices/slave/panstamp.cpp",
+					"settings":
+					{
+						"buffer_size": 9804,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5443,
+								5446
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2496.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/MainFrame.py",
+					"settings":
+					{
+						"buffer_size": 42523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11681,
+								11795
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4290.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/WaitDialog.py",
+					"settings":
+					{
+						"buffer_size": 3524,
 						"regions":
 						{
 						},
@@ -1043,10 +1051,40 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 234.0,
+						"translation.y": 546.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Python27/Lib/site-packages/swap/modem/SerialModem.py",
+					"settings":
+					{
+						"buffer_size": 11856,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5600,
+								5600
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1010.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
