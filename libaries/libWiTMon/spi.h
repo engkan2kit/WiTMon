@@ -97,6 +97,7 @@ class SPI
 
 };
 
+extern SPI objSPI;
 
 byte SPI::transfer(byte _data, uint8_t mode) {
   byte ret,prevmode;

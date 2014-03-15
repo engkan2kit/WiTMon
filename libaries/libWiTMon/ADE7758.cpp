@@ -225,3 +225,4 @@ long ADE7758::getVRMS(char phase)
     return read24bits(AVRMS+phase);
 }
 	
+ADE7758 ADE(objSPI, ADE_SS);

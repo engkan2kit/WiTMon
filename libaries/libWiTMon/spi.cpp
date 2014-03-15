@@ -98,3 +98,5 @@ void SPI::attachInterrupt() {
 void SPI::detachInterrupt() {
   SPCR &= ~_BV(SPIE);
 }
+
+SPI objSPI;

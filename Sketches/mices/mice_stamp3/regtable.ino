@@ -28,6 +28,7 @@
 #include "product.h"
 #include "panstamp.h"
 #include "regtable.h"
+#include "ADE7758.h"
 
 /**
  * Declaration of common callback functions
@@ -46,11 +47,12 @@ byte poleId[1];
 REGISTER regPoleId(poleId,sizeof(poleId),&updtPoleId,&setPoleId,SWDTYPE_OTHER,EEPROM_POLE_ID);
 byte location[8];
 REGISTER regLocation(location,sizeof(location),&updtLocation,&setLocation,SWDTYPE_OTHER,EEPROM_LOCATION);
-byte rms[18]; //RMS values of Vac,Vbc, Iac, Ibc 
+byte rms[12]; //RMS values of Vac,Iac, Vbc, Ibc 
 REGISTER regRms(rms,sizeof(rms),&updtRms,NULL);
-byte energy[18]; //real energies, reactive energies and complex energies for AC and BC
+byte energy[12]; //real energies, reactive energies and complex energies for AC and BC
 REGISTER regEnergy(energy,sizeof(energy),&updtEnergy,NULL);
-
+byte alerts[1]; //alerts register each bit corresponds to alert status.
+REGISTER regAlerts(alerts,sizeof(alerts),&updtAlerts,NULL);
 
 
 /**
@@ -60,7 +62,8 @@ DECLARE_REGISTERS_START()
   &regPoleId,
   &regLocation,
   &regRms,
-  &regEnergy
+  &regEnergy,
+  &regAlerts,
 DECLARE_REGISTERS_END()
 
 /**
@@ -116,11 +119,50 @@ const void updtLocation(byte rId){
   Serial.println(lon.f);
 }
 
+
 const void updtRms(byte rId){
-  // read RMS values of Vac,Vbc, Iac, Ibc
+  unsigned long ADErms;
+  // read RMS values of Vac, Iac,Vbc, Ibc,. Big endian.
+  for (int z = 0; z <2; z++)
+  {
+    ADErms = ADE.VRMS(PHASE_A + z);
+    regTable[rId]->value[z*6]= (ADErms>>16) & 0xff;
+    regTable[rId]->value[z*6+1]= (ADErms>>8) & 0xff;
+    regTable[rId]->value[z*6+2]= ADErms & 0xff;
+    ADErms = ADE.IRMS(PHASE_A + z);
+    regTable[rId]->value[z*6+3]= (ADErms>>16) & 0xff;
+    regTable[rId]->value[z*6+4]= (ADErms>>8) & 0xff;
+    regTable[rId]->value[z*6+5]= ADErms & 0xff;
+  }
+  
 }
 
 const void updtEnergy(byte rId){
-  //read 
-  
+  //real energies, reactive energies and complex energies for AC and BC. Big endian
+  unsigned long ADEenergy;
+  for (int z = 0; z <2; z++)
+  {
+    ADEenergy = ADE.getWattHR(PHASE_A + z);
+    regTable[rId]->value[z*6]=(ADEenergy>>8) & 0xff;
+    regTable[rId]->value[z*6+1]= (ADEenergy) & 0xff;
+    ADEenergy = ADE.getVARHR(PHASE_A + z);
+    regTable[rId]->value[z*6+2]= (ADEenergy>>8) & 0xff;
+    regTable[rId]->value[z*6+3]= (ADEenergy) & 0xff;
+    ADEenergy = ADE.getVAHR(PHASE_A + z);
+    regTable[rId]->value[z*6+4]= (ADEenergy>>8) & 0xff;
+    regTable[rId]->value[z*6+5]= (ADEenergy) & 0xff;
+  }
+}
+
+const void updtAlerts(byte rId){
+  unsigned long ADErms;
+  // read RMS values of Vac, Iac,Vbc, Ibc,. Big endian.
+  for (int z = 0; z <2; z++)
+  {
+    ADErms = ADE.VRMS(PHASE_A + z);
+    ADErms = ADE.IRMS(PHASE_A + z);
+    regTable[rId]->value[z*6+3]= (ADErms>>16) & 0xff;
+    regTable[rId]->value[z*6+4]= (ADErms>>8) & 0xff;
+    regTable[rId]->value[z*6+5]= ADErms & 0xff;
+  }
 }

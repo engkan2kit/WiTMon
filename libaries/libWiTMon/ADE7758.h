@@ -3,6 +3,7 @@
 
 #include "Arduino.h"
 #include "spi.h"
+#include "pins.h"
 
 #define AWATTHR   0x01
 #define BWATTHR   0x02
@@ -156,4 +157,6 @@ class ADE7758
     SPI _ADE7758SPI;
     int _SSpin;	
 };
+
+extern ADE7758 ADE;
 #endif
