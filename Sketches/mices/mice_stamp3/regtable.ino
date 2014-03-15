@@ -42,8 +42,8 @@ DEFINE_COMMON_REGISTERS()
 /*
  * Definition of custom registers
  */
-byte poleId;
-REGISTER regPoleId(&poleId,sizeof(poleId),&updtPoleId,&setPoleId,SWDTYPE_OTHER,EEPROM_POLE_ID);
+byte poleId[1];
+REGISTER regPoleId(poleId,sizeof(poleId),&updtPoleId,&setPoleId,SWDTYPE_OTHER,EEPROM_POLE_ID);
 byte location[8];
 REGISTER regLocation(location,sizeof(location),&updtLocation,&setLocation,SWDTYPE_OTHER,EEPROM_LOCATION);
 byte rms[18]; //RMS values of Vac,Vbc, Iac, Ibc 
