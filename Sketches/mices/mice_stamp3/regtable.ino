@@ -46,6 +46,10 @@ byte poleId;
 REGISTER regPoleId(&poleId,sizeof(poleId),&updtPoleId,&setPoleId,SWDTYPE_OTHER,EEPROM_POLE_ID);
 byte location[8];
 REGISTER regLocation(location,sizeof(location),&updtLocation,&setLocation,SWDTYPE_OTHER,EEPROM_LOCATION);
+byte rms[18]; //RMS values of Vac,Vbc, Iac, Ibc 
+REGISTER regRms(rms,sizeof(rms),&updtRms,NULL);
+byte energy[18]; //real energies, reactive energies and complex energies for AC and BC
+REGISTER regEnergy(energy,sizeof(energy),&updtEnergy,NULL);
 
 
 
@@ -54,7 +58,9 @@ REGISTER regLocation(location,sizeof(location),&updtLocation,&setLocation,SWDTYP
  */
 DECLARE_REGISTERS_START()
   &regPoleId,
-  &regLocation
+  &regLocation,
+  &regRms,
+  &regEnergy
 DECLARE_REGISTERS_END()
 
 /**
@@ -108,4 +114,13 @@ const void updtLocation(byte rId){
   Serial.print(lat.f);
   Serial.print(",");
   Serial.println(lon.f);
+}
+
+const void updtRms(byte rId){
+  // read RMS values of Vac,Vbc, Iac, Ibc
+}
+
+const void updtEnergy(byte rId){
+  //read 
+  
 }
