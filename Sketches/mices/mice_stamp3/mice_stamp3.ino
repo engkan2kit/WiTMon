@@ -1,8 +1,16 @@
 #include "regtable.h"
 #include "panstamp.h"
+
+#define DUMMY
+
+#ifdef DUMMY
+#include "dummy/ADE7758.h"
+#else
 #include "ADE7758.h"
+#endif
 
 #define alertCounts 5
+
 
 const int LED = 4;
 byte alertOVAC_ctr=0;
@@ -67,7 +75,6 @@ void alertRoutine()
      alertOIBC_ctr++;
   }  
   
-
   if (alertOVAC_ctr > alertCounts || alertOVBC_ctr>alertCounts || alertUVAC_ctr>alertCounts || alertUVBC_ctr>alertCounts || alertOIAC_ctr>alertCounts || alertOIBC_ctr>alertCounts)
   {
       getRegister(REGI_ALERTS)->getData();

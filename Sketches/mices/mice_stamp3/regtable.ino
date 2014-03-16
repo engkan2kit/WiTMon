@@ -28,7 +28,14 @@
 #include "product.h"
 #include "panstamp.h"
 #include "regtable.h"
+
+#define DUMMY
+
+#ifdef DUMMY
+#include "dummy/ADE7758.h"
+#else
 #include "ADE7758.h"
+#endif
 
 /**
  * Declaration of common callback functions
