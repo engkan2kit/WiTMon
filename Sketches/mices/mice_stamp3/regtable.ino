@@ -53,7 +53,8 @@ byte energy[12]; //real energies, reactive energies and complex energies for AC 
 REGISTER regEnergy(energy,sizeof(energy),&updtEnergy,NULL);
 byte alerts[1]; //alerts register each bit corresponds to alert status.
 REGISTER regAlerts(alerts,sizeof(alerts),&updtAlerts,NULL);
-
+byte threshold[12];
+REGISTER regThreshold(threshold,sizeof(threshold),NULL,&setThreshold,SWDTYPE_OTHER,EEPROM_LOCATION);
 
 /**
  * Initialize table of registers
@@ -64,6 +65,7 @@ DECLARE_REGISTERS_START()
   &regRms,
   &regEnergy,
   &regAlerts,
+  &regThreshold
 DECLARE_REGISTERS_END()
 
 /**
@@ -139,30 +141,74 @@ const void updtRms(byte rId){
 
 const void updtEnergy(byte rId){
   //real energies, reactive energies and complex energies for AC and BC. Big endian
+  //for demo only
   unsigned long ADEenergy;
   for (int z = 0; z <2; z++)
   {
-    ADEenergy = ADE.getWattHR(PHASE_A + z);
+    ADEenergy = 0;
     regTable[rId]->value[z*6]=(ADEenergy>>8) & 0xff;
     regTable[rId]->value[z*6+1]= (ADEenergy) & 0xff;
-    ADEenergy = ADE.getVARHR(PHASE_A + z);
+    ADEenergy = 0;
     regTable[rId]->value[z*6+2]= (ADEenergy>>8) & 0xff;
     regTable[rId]->value[z*6+3]= (ADEenergy) & 0xff;
-    ADEenergy = ADE.getVAHR(PHASE_A + z);
+    ADEenergy = 0;
     regTable[rId]->value[z*6+4]= (ADEenergy>>8) & 0xff;
     regTable[rId]->value[z*6+5]= (ADEenergy) & 0xff;
   }
 }
 
 const void updtAlerts(byte rId){
-  unsigned long ADErms;
-  // read RMS values of Vac, Iac,Vbc, Ibc,. Big endian.
-  for (int z = 0; z <2; z++)
+  byte alertReg=0;
+  long thresh=0,ADErms;
+  ADErms = ADE.VRMS(PHASE_A);
+  thresh = ((long)(regTable[REGI_THRESHOLD]->value[0]))<<16 | ((long)(regTable[REGI_THRESHOLD]->value[1]))<<8 | (regTable[REGI_THRESHOLD]->value[2]);
+  if (ADErms>thresh) //high voltage AC
   {
-    ADErms = ADE.VRMS(PHASE_A + z);
-    ADErms = ADE.IRMS(PHASE_A + z);
-    regTable[rId]->value[z*6+3]= (ADErms>>16) & 0xff;
-    regTable[rId]->value[z*6+4]= (ADErms>>8) & 0xff;
-    regTable[rId]->value[z*6+5]= ADErms & 0xff;
+     alertReg|=0x80; 
+     
   }
+  thresh = ((long)(regTable[REGI_THRESHOLD]->value[6]))<<16 | ((long)(regTable[REGI_THRESHOLD]->value[7]))<<8 | (regTable[REGI_THRESHOLD]->value[8]);
+  if (ADErms<thresh) //low voltage AC  
+  {
+     alertReg|=0b00100000; 
+     
+  }
+  
+  ADErms = ADE.VRMS(PHASE_B);
+  thresh = ((long)(regTable[REGI_THRESHOLD]->value[3]))<<16 | ((long)(regTable[REGI_THRESHOLD]->value[4]))<<8 | (regTable[REGI_THRESHOLD]->value[5]);
+  if (ADErms>thresh) //high voltage BC
+  {
+     alertReg|=0b01000000; 
+     
+  }
+  
+  thresh = ((long)(regTable[REGI_THRESHOLD]->value[9]))<<16 | ((long)(regTable[REGI_THRESHOLD]->value[10]))<<8 | (regTable[REGI_THRESHOLD]->value[11]);
+  if (ADErms<thresh) //low voltage BC 
+  {
+     alertReg|=0b00010000; 
+     
+  }
+  ADErms = ADE.IRMS(PHASE_A);
+  thresh = ((long)(regTable[REGI_THRESHOLD]->value[12]))<<16 | ((long)(regTable[REGI_THRESHOLD]->value[13]))<<8 | (regTable[REGI_THRESHOLD]->value[14]);
+  if (ADErms>thresh) //high current A 
+  {
+     alertReg|=0b00001000; 
+     
+  }
+
+  ADErms = ADE.IRMS(PHASE_B);
+  thresh = ((long)(regTable[REGI_THRESHOLD]->value[15]))<<16 | ((long)(regTable[REGI_THRESHOLD]->value[16]))<<8 | (regTable[REGI_THRESHOLD]->value[17]);
+  if (ADErms>thresh) //high current B
+  {
+     alertReg|=0b00000100; 
+     
+  }
+  
+  regTable[rId]->value[0]= alertReg;
+ 
+}
+
+const void setThreshold(byte rId, byte *calib)
+{
+  memcpy(regTable[rId]->value,calib,sizeof(*regTable[rId]->value));
 }

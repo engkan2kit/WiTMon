@@ -60,6 +60,11 @@ long ADE7758::IRMS(char phase)
   return current/100;
 }
 
+void accumulateEnergy()
+{
+    
+}
+
 long ADE7758::waveform(char phase,char source)
 {
 

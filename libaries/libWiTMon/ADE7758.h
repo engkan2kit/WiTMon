@@ -126,13 +126,15 @@ class ADE7758
   public:
     ADE7758 (SPI ADE7758SPI, int SSpin);
     void begin();
-    int getWattHR(char phase);
-    int getVARHR(char phase);
-    int getVAHR(char phase);
+    int WattHR(char phase);
+    int VARHR(char phase);
+    int VAHR(char phase);
     long VRMS(char phase);
     long IRMS(char phase);
     long waveform(char phase,char source);
-    
+
+    void accumulateEnergy();
+
     void powerOff();
     void powerON();
     void sleep();
@@ -153,9 +155,20 @@ class ADE7758
     unsigned long read24bits(char reg);
     long getIRMS(char phase);
     long getVRMS(char phase);
+    int getWattHR(char phase);
+    int getVARHR(char phase);
+    int getVAHR(char phase);
 
     SPI _ADE7758SPI;
     int _SSpin;	
+
+
+    long accuWattHRA;
+    long accuWattHRB;
+    long accuVARHRA;
+    long accuVARHRB;
+    long accuVAHRA;
+    long accuVAHRB;
 };
 
 extern ADE7758 ADE;
