@@ -1,13 +1,9 @@
 #include "regtable.h"
 #include "panstamp.h"
 
-//#define DUMMY
 
-#ifdef DUMMY
-#include "dummy/ADE7758.h"
-#else
 #include "ADE7758.h"
-#endif
+
 
 #define alertCounts 5
 
@@ -21,6 +17,7 @@ byte alertOIAC_ctr=0;
 byte alertOIBC_ctr=0;
 byte alertsCounter=0;
 unsigned int min_ctr=0;
+
 
 union ufloat{
   float f;
@@ -109,11 +106,13 @@ void setup()
   blinker();
   // Init panStamp
   panstamp.init();
-  panstamp.enableRepeater(4);
+  //panstamp.enableRepeater(4);
   if(panstamp.cc1101.devAddress == 0xFF){
     Serial.println("Setting Address to default 0x0A");
     panstamp.cc1101.setDevAddress(0x0A,true);
   }
+  
+  //rtc.begin();
   Serial.flush();
   Serial.println("MICE Initialized...");
   //Broadcast  Releveant Info @ start up

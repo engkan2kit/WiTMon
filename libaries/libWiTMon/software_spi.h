@@ -34,11 +34,11 @@
       #define DELAY_CYCLES_C1 3   //capture post ( capture -> SCK edge)  usually bigger delay 
     #else
       //#error "checking your board and MCU main frequency and set prooper delay for software_SPI bit-banging"
-       #define DELAY_CYCLES  8     //more precise than micro second delay,  1/4 of SPI bus frequency , depends on MCU master clock, 
+      #define DELAY_CYCLES  16     //more precise than micro second delay,  1/4 of SPI bus frequency , depends on MCU master clock, 
       #define DELAY_CYCLES_P0  8  //propogation pre
-      #define DELAY_CYCLES_P1  12  //propogation post
-      #define DELAY_CYCLES_C0 4   //capture pre (SCK edge -> capture) usually smaller delay
-      #define DELAY_CYCLES_C1 12   //capture post ( capture -> SCK edge)  usually bigger delay 
+      #define DELAY_CYCLES_P1  24  //propogation post
+      #define DELAY_CYCLES_C0 8   //capture pre (SCK edge -> capture) usually smaller delay
+      #define DELAY_CYCLES_C1 24   //capture post ( capture -> SCK edge)  usually bigger delay 
     #endif
   
  // #endif

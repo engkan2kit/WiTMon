@@ -520,66 +520,42 @@
 	"buffers":
 	[
 		{
-			"file": "libaries/libWiTMon/swpacket.cpp",
+			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/software_spi.h",
 			"settings":
 			{
-				"buffer_size": 4681,
+				"buffer_size": 2535,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "libaries/libWiTMon/swpacket.h",
+			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/pins.h",
 			"settings":
 			{
-				"buffer_size": 3543,
+				"buffer_size": 1080,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Sketches/mices/slave/regtable.ino",
+			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/software_spi.cpp",
 			"settings":
 			{
-				"buffer_size": 1506,
+				"buffer_size": 4127,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Sketches/mices/slave/register.cpp",
+			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.h",
 			"settings":
 			{
-				"buffer_size": 2417,
+				"buffer_size": 3741,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Sketches/mices/slave/commonregs.h",
+			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.cpp",
 			"settings":
 			{
-				"buffer_size": 12893,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Sketches/mices/slave/register.h",
-			"settings":
-			{
-				"buffer_size": 3894,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Sketches/mices/slave/regtable.h",
-			"settings":
-			{
-				"buffer_size": 1117,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "libaries/libWiTMon/swcommand.h",
-			"settings":
-			{
-				"buffer_size": 1389,
+				"buffer_size": 3335,
 				"line_ending": "Unix"
 			}
 		}
@@ -609,9 +585,54 @@
 	"file_history":
 	[
 		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.cpp",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/pins.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/cc1101.cpp",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/panstamp.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/cc1101.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/panstamp.cpp",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/panstamp.cpp",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/rtc/rtc.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/dummy/ADE7758.cpp",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/dummy/ADE7758.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/panstamp.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/spi.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/cc1101.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/cc1101.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/cc1101.cpp",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/register.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/register.cpp",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/spi.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/spi.cpp",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/commonregs.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/swpacket.cpp",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/swstatus.cpp",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/swpacket.cpp",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/spi.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/dummy/ADE7758.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/dummy/ADE7758.h",
+		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.h",
+		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/cc1101.h",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/commonregs.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758dummy.h",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758dummy.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/swpacket.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/swpacket.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/regtable.ino",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/regtable.h",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/swcommand.h",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/pins.h",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/spi.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/register.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/spi.h",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/ADE7758.cpp",
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/ADE7758.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/register.h",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/register.cpp",
+		"/F/ARDUINO/WiTMon/Sketches/mices/slave/commonregs.h",
 		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/SwapManager.py",
 		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/pyswapdmtgui.py",
-		"/F/ARDUINO/WiTMon/Sketches/mices/slave/panstamp.cpp",
 		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/MainFrame.py",
 		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/WaitDialog.py",
 		"/C/Python27/Lib/site-packages/swap/modem/SerialModem.py",
@@ -622,28 +643,14 @@
 		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/SerialDialog.py",
 		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/NetworkDialog.py",
 		"/F/ACADS/PCIEERD/panstamp_apps/panStamp/swapdmt/config/swapnet.json",
-		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/pins.h",
-		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/spi.h",
-		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/spi.cpp",
-		"/F/ARDUINO/WiTMon/libaries/libWiTMon/pins.h",
 		"/F/ARDUINO/WiTMon/Sketches/mices/slave/ADE7758.cpp",
-		"/F/ARDUINO/WiTMon/Sketches/mices/slave/spi.cpp",
-		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.cpp",
-		"/F/ARDUINO/WiTMon/Sketches/mices/slave/spi.h",
-		"/C/Program Files (x86)/Arduino/libraries/SPI/SPI.h",
 		"/F/ARDUINO/ADE7758/myADE7758/ADE7758.cpp",
-		"/F/ARDUINO/WiTMon/libaries/libWiTMon/cc1101.cpp",
 		"/F/ARDUINO/WiTMon/Sketches/mices/master/master.ino",
 		"/F/ARDUINO/WiTMon/Sketches/mices/master/commonregs.h",
 		"/F/ARDUINO/WiTMon/Sketches/mices/master/regtable.ino",
 		"/F/ARDUINO/WiTMon/Sketches/mices/master/regtable.h",
 		"/F/ARDUINO/WiTMon/Sketches/mices/master/register.h",
 		"/F/ARDUINO/WiTMon/Sketches/mices/master/register.cpp",
-		"/F/ARDUINO/WiTMon/libaries/libWiTMon/spi.cpp",
-		"/F/ARDUINO/WiTMon/libaries/libWiTMon/cc1101.h",
-		"/F/ARDUINO/WiTMon/libaries/libWiTMon/spi.h",
-		"/F/ARDUINO/WiTMon/libaries/libWiTMon/ADE7758.cpp",
-		"/F/ARDUINO/WiTMon/libaries/libWiTMon/ADE7758.h",
 		"/F/ARDUINO/WiTMon/Sketches/mices/master/slave.ino",
 		"/F/ARDUINO/WiTMon/Sketches/mices/Master/mice_stamp2.ino",
 		"/F/ARDUINO/WiTMon/libaries/panstamp/cc1101.cpp",
@@ -704,38 +711,7 @@
 		"/F/Work/MITM/mjit/server/api/models/shopper/shopper.js",
 		"/F/Work/MITM/mjit/server/api/routes_api.js",
 		"/F/Work/MITM/mjit/server/api/models/vendor/vendor.js",
-		"/F/Work/MITM/mjit/server/api/models/user/user.js",
-		"/F/ARDUINO/ADE7758/ADE7758/ADE7758.h",
-		"/F/ARDUINO/ADE7758/ADE7758/ADE7758.cpp",
-		"/F/ARDUINO/ADE7758/ADE7758/ADE7758.c",
-		"/F/Work/EMBEDSOURCING/WeKnowDeals/schema/coupons.json",
-		"/F/Work/MITM/mjit/server/api/email/email.js",
-		"/F/Work/EMBEDSOURCING/WeKnowDeals/server/api/login.js",
-		"/F/Work/EMBEDSOURCING/WeKnowDeals/schema/users.json",
-		"/F/Work/EMBEDSOURCING/WeKnowDeals/schema/base_accounts.json",
-		"/F/Work/EMBEDSOURCING/WeKnowDeals/server/server.js",
-		"/F/beaglebone/chai-pcr-LCD5-00A0.dts",
-		"/F/beaglebone/chai-pcr-LCDtouch5-00A0.dts",
-		"/F/beaglebone/chai-pcr-touch5-00A0.dts",
-		"/F/Work/EMBEDSOURCING/WeKnowDeals/server/test/fixtures/fixtures.js",
-		"/F/Work/EMBEDSOURCING/WeKnowDeals/common/routes/routes.js",
-		"/F/Work/MITM/mjit/common/collections/definitions/apis/collections.js",
-		"/F/Work/MITM/mjit/client/dashboard/admin/registeradminTemplate.js",
-		"/F/Work/MITM/mjit/schema/user_base_accounts.json",
-		"/F/Work/MITM/mjit/schema/redeemed_coupons.json",
-		"/F/Work/MITM/mjit/server/api/security/accounts/accounts.js",
-		"/F/Work/MITM/mjit/server/api/APIOutputFormat.js",
-		"/F/Work/MITM/mjit/server/api/models/product/product.js",
-		"/F/Work/MITM/mjit/client/dashboard/templating/foralledituserTemplate.js",
-		"/C/Users/Setsuna F. Seie/Downloads/PCRRealTime.tar/PCRRealTime/PCRRealTime/overlay/chai-pcr-00A0.dts",
-		"/F/Work/MITM/mjit/schema/coupons.json",
-		"/F/Work/MITM/mjit/schema/broker_coupons.json",
-		"/F/Work/MITM/mjit/server/api/models/broker/broker.js",
-		"/F/Work/MITM/mjit/server/api/models/coupon/coupon.js",
-		"/F/Work/MITM/mjit/server/server.js",
-		"/F/Work/nodeddp/example_2.js",
-		"/F/Work/nodeddp/example.js",
-		"/F/Work/MITM/mjit/server/publish.js"
+		"/F/Work/MITM/mjit/server/api/models/user/user.js"
 	],
 	"find":
 	{
@@ -754,6 +730,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"FALLING",
+			"isrGDO0event",
+			"bitRead",
+			"cmdStrobe",
+			"setRxState",
 			"goToCommandMode()",
 			"_wait_modem_start ",
 			"ATZ",
@@ -876,12 +857,7 @@
 			"coupons",
 			"create",
 			"coupons",
-			"reserve",
-			"redempt",
-			"redeptio",
-			"redeemer",
-			"redeemers",
-			"vote_coupon"
+			"reserve"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -900,22 +876,23 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "libaries/libWiTMon/swpacket.cpp",
+					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/software_spi.h",
 					"settings":
 					{
-						"buffer_size": 4681,
+						"buffer_size": 2535,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1600,
-								1616
+								1646,
+								1646
 							]
 						],
 						"settings":
@@ -932,156 +909,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "libaries/libWiTMon/swpacket.h",
+					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/pins.h",
 					"settings":
 					{
-						"buffer_size": 3543,
+						"buffer_size": 1080,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 819.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Sketches/mices/slave/regtable.ino",
-					"settings":
-					{
-						"buffer_size": 1506,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 195.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Sketches/mices/slave/register.cpp",
-					"settings":
-					{
-						"buffer_size": 2417,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Sketches/mices/slave/commonregs.h",
-					"settings":
-					{
-						"buffer_size": 12893,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 663.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Sketches/mices/slave/register.h",
-					"settings":
-					{
-						"buffer_size": 3894,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Sketches/mices/slave/regtable.h",
-					"settings":
-					{
-						"buffer_size": 1117,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								118,
+								118
 							]
 						],
 						"settings":
@@ -1095,19 +934,47 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "libaries/libWiTMon/swcommand.h",
+					"buffer": 2,
+					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/software_spi.cpp",
 					"settings":
 					{
-						"buffer_size": 1389,
+						"buffer_size": 4127,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1363,
-								1363
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 312.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.h",
+					"settings":
+					{
+						"buffer_size": 3741,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1117,7 +984,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 156.0,
+						"translation.y": 1677.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.cpp",
+					"settings":
+					{
+						"buffer_size": 3335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								373,
+								386
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 468.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1156,6 +1051,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 88.0
+	},
 	"replace":
 	{
 		"height": 62.0

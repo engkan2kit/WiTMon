@@ -28,14 +28,12 @@
 #include "product.h"
 #include "panstamp.h"
 #include "regtable.h"
+//#include "rtc.h"
+//DS1307 rtc;
 
-//#define DUMMY
 
-#ifdef DUMMY
-#include "dummy/ADE7758.h"
-#else
 #include "ADE7758.h"
-#endif
+
 
 /**
  * Declaration of common callback functions
@@ -54,6 +52,8 @@ byte poleId[1];
 REGISTER regPoleId(poleId,sizeof(poleId),&updtPoleId,&setPoleId,SWDTYPE_OTHER,EEPROM_POLE_ID);
 byte location[8];
 REGISTER regLocation(location,sizeof(location),&updtLocation,&setLocation,SWDTYPE_OTHER,EEPROM_LOCATION);
+byte timeStamp[4];
+REGISTER regTimeStamp(timeStamp,sizeof(timeStamp),&updtTimeStamp,&setTimeStamp);
 byte rms[12]; //RMS values of Vac,Iac, Vbc, Ibc 
 REGISTER regRms(rms,sizeof(rms),&updtRms,NULL);
 byte energy[12]; //real energies, reactive energies and complex energies for AC and BC
@@ -69,6 +69,7 @@ REGISTER regThreshold(threshold,sizeof(threshold),NULL,&setThreshold,SWDTYPE_OTH
 DECLARE_REGISTERS_START()
   &regPoleId,
   &regLocation,
+  &regTimeStamp,
   &regRms,
   &regEnergy,
   &regAlerts,
@@ -221,3 +222,27 @@ const void setThreshold(byte rId, byte *calib)
 {
   memcpy(regTable[rId]->value,calib,sizeof(*regTable[rId]->value));
 }
+
+const void setTimeStamp(byte rId, byte *timestmp)
+{
+  /*memcpy(regTable[rId]->value,timestmp,sizeof(*regTable[rId]->value));
+  uint32_t time; 
+  time = (uint32_t)(regTable[rId]->value[0]) << 24;
+  time = time | (uint32_t)(regTable[rId]->value[1]) << 16;
+  time = time | (uint32_t)(regTable[rId]->value[2]) << 8;
+  time = time | regTable[rId]->value[3]; 
+  rtc.adjust(time);
+*/
+}
+
+const void updtTimeStamp(byte rId)
+{
+ /* TSTAMP ts = rtc.now();
+  uint32_t time=ts.unixtime();
+  regTable[rId]->value[0] =(time>>24) & 0xFF; 
+  regTable[rId]->value[1] =(time>>16) & 0xFF; 
+  regTable[rId]->value[2] =(time>>8) & 0xFF; 
+  regTable[rId]->value[3] =(time) & 0xFF; 
+   */ 
+}
+
