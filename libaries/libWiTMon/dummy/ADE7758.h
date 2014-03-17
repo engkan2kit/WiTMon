@@ -119,12 +119,12 @@
 
 
 #define WAVMODE_VALUE(phase, wave)   (((wave)<<2)|(phase))
-
+int potpin1 = 0;
 
 class ADE7758
 {
   public:
-    ADE7758 (int SSpin);
+    ADE7758 (SPI ADE7758SPI, int SSpin);
     void begin();
     int WattHR(char phase);
     int VARHR(char phase);
@@ -142,18 +142,17 @@ class ADE7758
 
     long getInterruptStatus(void);
     long getResetInterruptStatus(void);
+    
+
+
+  private:
     void enableChip();
     void disableChip();
-     void write8bits(char reg, unsigned char data);
+    void write8bits(char reg, unsigned char data);
     void write16bits(char reg, unsigned int data);
     unsigned char read8bits(char reg);
     unsigned int read16bits(char reg);
     unsigned long read24bits(char reg);
-
-
-  private:
-
-   
     long getIRMS(char phase);
     long getVRMS(char phase);
     int getWattHR(char phase);
@@ -173,4 +172,6 @@ class ADE7758
 };
 
 extern ADE7758 ADE;
+extern int potpin0 ;
+extern int potpin1 ;
 #endif

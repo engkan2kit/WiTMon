@@ -7,7 +7,7 @@
  * SPI pins -- Modified for GIZDUINO-X
  */
 
-#define MEGA
+//#define MEGA
 
 
 
@@ -53,7 +53,7 @@
 #define BIT_SPI_MISO  4
 
 #define PORT_SPI_SS  PORTB
-#define BIT_SPI_SS   3
+#define BIT_SPI_SS   2
 
 #define PORT_GDO0  PIND
 #define BIT_GDO0 2

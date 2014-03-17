@@ -1,7 +1,7 @@
 #include "regtable.h"
 #include "panstamp.h"
 
-#define DUMMY
+//#define DUMMY
 
 #ifdef DUMMY
 #include "dummy/ADE7758.h"
@@ -103,11 +103,13 @@ void alertRoutine()
 void setup()
 {
   pinMode(LED,OUTPUT);
+  ADE.begin();
   Serial.begin(38400);
   while(!Serial){};
   blinker();
   // Init panStamp
   panstamp.init();
+  panstamp.enableRepeater(4);
   if(panstamp.cc1101.devAddress == 0xFF){
     Serial.println("Setting Address to default 0x0A");
     panstamp.cc1101.setDevAddress(0x0A,true);
@@ -122,9 +124,11 @@ void setup()
 void loop(){
   delay(1000);
   min_ctr++;
-  if (min_ctr>=60)
+  if (min_ctr>=1)
   {
     alertRoutine();
+    getRegister(REGI_RMS)->getData();
+    Serial.println("Sent");
     min_ctr=0;
   }
   blinker();

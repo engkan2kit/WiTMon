@@ -102,7 +102,7 @@ boolean SWPACKET::send(void)
   CCPACKET packet;
   byte i;
   boolean res;
-
+ Serial.println("here8");
   // Smart encryption only available for simple (1-byte) addressing schema
   #ifndef SWAP_EXTENDED_ADDRESS
     // Need to encrypt packet?
@@ -147,6 +147,8 @@ boolean SWPACKET::send(void)
   }
 
   i = SWAP_NB_TX_TRIES;
+   Serial.println("here7");
+ delay(1000);
   while(!(res = panstamp.cc1101.sendData(packet)) && i>1)
   {
     i--;

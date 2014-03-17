@@ -26,31 +26,38 @@
  
 #include "regtable.h"
 #include "panstamp.h"
+#include "pins.h"
 
 /**
  * setup
  *
  * Arduino setup function
  */
-const int LED = 4;
+
 
 void blinker(){
   delay(500);
-  digitalWrite(LED,HIGH);
+  digitalWrite(LED0,HIGH);
   delay(500);
-  digitalWrite(LED,LOW);
+  digitalWrite(LED0,LOW);
+  Serial.println("blink");
 } 
 
 void setup()
 {
-  pinMode(LED,OUTPUT);
+  pinMode(LED0,OUTPUT);
   Serial.begin(9600);
-  while(!Serial){};
-  blinker();
+ while(!Serial){};
+ 
+ blinker();
   // Init panStamp
+  delay(100);
   panstamp.init();
+  panstamp.swapAddress = 0x0B;
+ 
   Serial.println("MICE Initialized...");
   // Transmit product code
+  blinker();
   getRegister(REGI_PRODUCTCODE)->getData();
 }
 
@@ -61,7 +68,8 @@ void setup()
  */
 void loop()
 {
-    getRegister(REGI_PRODUCTCODE)->getData();
-    blinker();
+  blinker();  
+  getRegister(REGI_PRODUCTCODE)->getData();
+
 }
 

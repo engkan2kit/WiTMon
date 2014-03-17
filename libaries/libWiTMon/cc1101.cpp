@@ -265,14 +265,19 @@ void CC1101::setDefaultRegs(void)
  */
 void CC1101::init(void) 
 {
-  spi.init();                           // Initialize SPI interface
+
+  spi.init();       
+          // Initialize SPI interface
   pinMode(GDO0, INPUT);                 // Config GDO0 as input
 
   reset();                              // Reset CC1101
-
+   Serial.println("here0");
+ delay(1000); 
   // Configure PATABLE
   //writeBurstReg(CC1101_PATABLE, (byte*)paTable, 8);
   writeReg(CC1101_PATABLE, paTableByte);
+     Serial.println("here1");
+ delay(1000); 
 }
 
 /**
@@ -445,10 +450,8 @@ boolean CC1101::sendData(CCPACKET packet)
   // Declare to be in Tx state. This will avoid receiving packets whilst
   // transmitting
   rfState = RFSTATE_TX;
-
   // Enter RX state
   setRxState();
-
   // Check that the RX state has been entered
   while (((marcState = readStatusReg(CC1101_MARCSTATE)) & 0x1F) != 0x0D)
   {
@@ -465,7 +468,7 @@ boolean CC1101::sendData(CCPACKET packet)
 
   // CCA enabled: will enter TX state only if the channel is clear
   setTxState();
-
+ Serial.println("here10");
   // Check that TX state is being entered (state = RXTX_SETTLING)
   marcState = readStatusReg(CC1101_MARCSTATE) & 0x1F;
   if((marcState != 0x13) && (marcState != 0x14) && (marcState != 0x15))
@@ -481,7 +484,7 @@ boolean CC1101::sendData(CCPACKET packet)
 
   // Wait for the sync word to be transmitted
   wait_GDO0_high();
-
+ Serial.println("here11");
   // Wait until the end of the packet transmission
   wait_GDO0_low();
 
@@ -491,7 +494,7 @@ boolean CC1101::sendData(CCPACKET packet)
 
   setIdleState();       // Enter IDLE state
   flushTxFifo();        // Flush Tx FIFO
-
+ Serial.println("here12");
   // Enter back into RX state
   setRxState();
 

@@ -56,9 +56,12 @@ void REGISTER::getData(void)
   // Update register value
   if (updateValue != NULL)
     updateValue(id);
-
+  Serial.println("here5");
+ delay(1000);
   // Send SWAP status message about the new value
   sendSwapStatus();
+   Serial.println("here6");
+ delay(1000);
 }
 
 /**

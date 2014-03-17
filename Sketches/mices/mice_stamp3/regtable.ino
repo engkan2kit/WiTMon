@@ -29,7 +29,7 @@
 #include "panstamp.h"
 #include "regtable.h"
 
-#define DUMMY
+//#define DUMMY
 
 #ifdef DUMMY
 #include "dummy/ADE7758.h"
@@ -135,10 +135,12 @@ const void updtRms(byte rId){
   for (int z = 0; z <2; z++)
   {
     ADErms = ADE.VRMS(PHASE_A + z);
+    Serial.println(ADErms,HEX);
     regTable[rId]->value[z*6]= (ADErms>>16) & 0xff;
     regTable[rId]->value[z*6+1]= (ADErms>>8) & 0xff;
     regTable[rId]->value[z*6+2]= ADErms & 0xff;
     ADErms = ADE.IRMS(PHASE_A + z);
+    Serial.println(ADErms,HEX);
     regTable[rId]->value[z*6+3]= (ADErms>>16) & 0xff;
     regTable[rId]->value[z*6+4]= (ADErms>>8) & 0xff;
     regTable[rId]->value[z*6+5]= ADErms & 0xff;

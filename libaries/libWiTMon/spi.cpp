@@ -80,7 +80,7 @@ void SPI::setDataMode(uint8_t mode)
 
 uint8_t SPI::getDataMode()
 {
-  return SPCR;
+  return (SPCR & SPI_MODE_MASK);
 }
 
 void SPI::setClockDivider(uint8_t rate)

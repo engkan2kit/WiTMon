@@ -26,6 +26,7 @@
  
 #include "regtable.h"
 #include "panstamp.h"
+#include "pins.h"
 
 /**
  * setup
@@ -62,6 +63,6 @@ void setup()
  */
 void loop()
 {
-  
+  blinker();
 }
 

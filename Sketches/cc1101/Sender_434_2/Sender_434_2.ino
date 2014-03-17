@@ -1,7 +1,7 @@
 #include <cc1101.h>
 #include <EEPROM.h>
 
-const int LED0 = 4;
+//const int LED0 = 4;
 // The syncWord of sender and receiver must be the same
 byte syncWord[] = {19, 9};
 byte senderAddress = 4;

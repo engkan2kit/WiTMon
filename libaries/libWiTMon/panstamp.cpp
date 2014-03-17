@@ -215,11 +215,9 @@ void PANSTAMP::init()
 
   // Calibrate internal RC oscillator
   //rtcCrystal = rcOscCalibrate();
-
   // Intialize registers
   for(i=0 ; i<regTableSize ; i++)
     regTable[i]->init();
-
   // Setup CC1101
   cc1101.init();
 
@@ -242,16 +240,14 @@ void PANSTAMP::init()
 */
 
   delayMicroseconds(50);  
-
   // Enter RX state
   cc1101.setRxState();
-
   // Attach callback function for GDO0 (INT0)
   enableIRQ_GDO0();
-
   // Default values
   nonce = 0;
   systemState = SYSTATE_RXON;
+
 }
 
 /**
