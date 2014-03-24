@@ -1,7 +1,7 @@
 #include "regtable.h"
 #include "panstamp.h"
 
-const int LED = 4;
+const int LED = 9;
 
 void blinker(){
   digitalWrite(LED,HIGH);

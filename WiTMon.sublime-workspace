@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"read",
+				"read8bits"
+			],
+			[
 				"set",
 				"setDataMode"
 			],
@@ -510,10 +514,6 @@
 			[
 				"update",
 				"update_location"
-			],
-			[
-				"foll",
-				"followValue"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/software_spi.h",
 			"settings":
 			{
-				"buffer_size": 2535,
+				"buffer_size": 2455,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/pins.h",
 			"settings":
 			{
-				"buffer_size": 1080,
+				"buffer_size": 1255,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/software_spi.cpp",
 			"settings":
 			{
-				"buffer_size": 4127,
+				"buffer_size": 4145,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,7 +547,7 @@
 			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.h",
 			"settings":
 			{
-				"buffer_size": 3741,
+				"buffer_size": 3771,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,7 +555,7 @@
 			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.cpp",
 			"settings":
 			{
-				"buffer_size": 3335,
+				"buffer_size": 3514,
 				"line_ending": "Unix"
 			}
 		}
@@ -876,7 +876,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -884,15 +884,15 @@
 					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/software_spi.h",
 					"settings":
 					{
-						"buffer_size": 2535,
+						"buffer_size": 2455,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1646,
-								1646
+								266,
+								266
 							]
 						],
 						"settings":
@@ -902,7 +902,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 78.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -912,15 +912,15 @@
 					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/pins.h",
 					"settings":
 					{
-						"buffer_size": 1080,
+						"buffer_size": 1255,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								118,
-								118
+								1185,
+								1185
 							]
 						],
 						"settings":
@@ -938,15 +938,15 @@
 					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/software_spi.cpp",
 					"settings":
 					{
-						"buffer_size": 4127,
+						"buffer_size": 4145,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								71,
+								71
 							]
 						],
 						"settings":
@@ -956,7 +956,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 312.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -966,15 +966,15 @@
 					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.h",
 					"settings":
 					{
-						"buffer_size": 3741,
+						"buffer_size": 3771,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2929,
+								2929
 							]
 						],
 						"settings":
@@ -984,7 +984,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1677.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -994,15 +994,15 @@
 					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.cpp",
 					"settings":
 					{
-						"buffer_size": 3335,
+						"buffer_size": 3514,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								373,
-								386
+								1611,
+								1502
 							]
 						],
 						"settings":
@@ -1012,7 +1012,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 468.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

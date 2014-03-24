@@ -115,14 +115,12 @@ int ADE7758::lineFreq(char phase){
 
 void ADE7758::enableChip()
 {
-    detachInterrupt(0);
     digitalWrite(_SSpin, LOW);
 }
 
 void ADE7758::disableChip()
 {
     digitalWrite(_SSpin, HIGH);
-    attachInterrupt(0, isrGDO0event, FALLING);
 }
 
 void ADE7758::write8bits(char reg, unsigned char data)
