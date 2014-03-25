@@ -544,7 +544,23 @@
 			}
 		},
 		{
-			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.h",
+			"file": "libaries/libWiTMon/dummy/ADE7758Dummy.h",
+			"settings":
+			{
+				"buffer_size": 3128,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libaries/libWiTMon/ADE7758.cpp",
+			"settings":
+			{
+				"buffer_size": 3542,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libaries/libWiTMon/ADE7758.h",
 			"settings":
 			{
 				"buffer_size": 3771,
@@ -552,10 +568,10 @@
 			}
 		},
 		{
-			"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.cpp",
+			"file": "libaries/libWiTMon/dummy/ADE7758Dummy.cpp",
 			"settings":
 			{
-				"buffer_size": 3514,
+				"buffer_size": 845,
 				"line_ending": "Unix"
 			}
 		}
@@ -584,13 +600,14 @@
 	},
 	"file_history":
 	[
+		"/F/ARDUINO/WiTMon/libaries/libWiTMon/dummy/ADE7758Dummy.cpp",
 		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.cpp",
+		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.h",
 		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/pins.h",
 		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/cc1101.cpp",
 		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/panstamp.h",
 		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/cc1101.h",
 		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/panstamp.cpp",
-		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.h",
 		"/F/ARDUINO/WiTMon/Sketches/mices/slave/panstamp.cpp",
 		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/rtc/rtc.h",
 		"/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/dummy/ADE7758.cpp",
@@ -710,8 +727,7 @@
 		"/F/Work/MITM/mjit/server/api/login.js",
 		"/F/Work/MITM/mjit/server/api/models/shopper/shopper.js",
 		"/F/Work/MITM/mjit/server/api/routes_api.js",
-		"/F/Work/MITM/mjit/server/api/models/vendor/vendor.js",
-		"/F/Work/MITM/mjit/server/api/models/user/user.js"
+		"/F/Work/MITM/mjit/server/api/models/vendor/vendor.js"
 	],
 	"find":
 	{
@@ -730,6 +746,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ADE7758",
 			"FALLING",
 			"isrGDO0event",
 			"bitRead",
@@ -856,8 +873,7 @@
 			"broker",
 			"coupons",
 			"create",
-			"coupons",
-			"reserve"
+			"coupons"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -876,7 +892,6 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
 				{
@@ -963,18 +978,46 @@
 				},
 				{
 					"buffer": 3,
-					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.h",
+					"file": "libaries/libWiTMon/dummy/ADE7758Dummy.h",
 					"settings":
 					{
-						"buffer_size": 3771,
+						"buffer_size": 3128,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2929,
-								2929
+								2701,
+								2701
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1326.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "libaries/libWiTMon/ADE7758.cpp",
+					"settings":
+					{
+						"buffer_size": 3542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								132,
+								132
 							]
 						],
 						"settings":
@@ -990,19 +1033,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/C/Users/Setsuna F. Seie/Documents/Arduino/libraries/libWiTMon/ADE7758.cpp",
+					"buffer": 5,
+					"file": "libaries/libWiTMon/ADE7758.h",
 					"settings":
 					{
-						"buffer_size": 3514,
+						"buffer_size": 3771,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1611,
-								1502
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1013,6 +1056,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "libaries/libWiTMon/dummy/ADE7758Dummy.cpp",
+					"settings":
+					{
+						"buffer_size": 845,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								355,
+								355
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 195.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

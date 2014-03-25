@@ -1,5 +1,5 @@
-#ifndef ADE7758_h
-#define ADE7758_h
+#ifndef ADE7758Dummy_h
+#define ADE7758Dummy_h
 
 #include "Arduino.h"
 #include "spi.h"
@@ -119,59 +119,33 @@
 
 
 #define WAVMODE_VALUE(phase, wave)   (((wave)<<2)|(phase))
-int potpin1 = 0;
+extern int potpin0;
+extern int potpin1;
 
-class ADE7758
+class ADE7758Dummy
 {
   public:
-    ADE7758 (SPI ADE7758SPI, int SSpin);
+    ADE7758Dummy ( int SSpin);
     void begin();
     int WattHR(char phase);
     int VARHR(char phase);
     int VAHR(char phase);
     long VRMS(char phase);
     long IRMS(char phase);
-    long waveform(char phase,char source);
 
-    void accumulateEnergy();
-
-    void powerOff();
-    void powerON();
-    void sleep();
-    void wakeUp();
-
-    long getInterruptStatus(void);
-    long getResetInterruptStatus(void);
     
 
 
   private:
     void enableChip();
     void disableChip();
-    void write8bits(char reg, unsigned char data);
-    void write16bits(char reg, unsigned int data);
-    unsigned char read8bits(char reg);
-    unsigned int read16bits(char reg);
-    unsigned long read24bits(char reg);
-    long getIRMS(char phase);
-    long getVRMS(char phase);
-    int getWattHR(char phase);
-    int getVARHR(char phase);
-    int getVAHR(char phase);
 
-    SPI _ADE7758SPI;
+
+    SPI _ADE7758DummySPI;
     int _SSpin;	
-
-
-    long accuWattHRA;
-    long accuWattHRB;
-    long accuVARHRA;
-    long accuVARHRB;
-    long accuVAHRA;
-    long accuVAHRB;
 };
 
-extern ADE7758 ADE;
+extern ADE7758Dummy ADE;
 extern int potpin0 ;
 extern int potpin1 ;
 #endif
