@@ -28,8 +28,8 @@
 #include "product.h"
 #include "panstamp.h"
 #include "regtable.h"
-//#include "rtc.h"
-//DS1307 rtc;
+#include "rtc.h"
+DS1307 rtc;
 #include "ADE7758.h"
 
 //#include "ADE7758Dummy.h"
@@ -54,15 +54,16 @@ byte location[8];
 REGISTER regLocation(location,sizeof(location),&updtLocation,&setLocation,SWDTYPE_OTHER,EEPROM_LOCATION);
 byte timeStamp[4];
 REGISTER regTimeStamp(timeStamp,sizeof(timeStamp),&updtTimeStamp,&setTimeStamp);
-byte rms[12]; //RMS values of Vac,Iac, Vbc, Ibc 
+byte rms[16]; //RMS values of Vac,Iac, Vbc, Ibc 
 REGISTER regRms(rms,sizeof(rms),&updtRms,NULL);
-byte energy[12]; //real energies, reactive energies and complex energies for AC and BC
+byte energy[16]; //real energies, reactive energies and complex energies for AC and BC
 REGISTER regEnergy(energy,sizeof(energy),&updtEnergy,NULL);
-byte alerts[1]; //alerts register each bit corresponds to alert status.
+byte alerts[5]; //alerts register each bit corresponds to alert status.
 REGISTER regAlerts(alerts,sizeof(alerts),&updtAlerts,NULL);
-byte threshold[12];
+byte threshold[16];
 REGISTER regThreshold(threshold,sizeof(threshold),NULL,&setThreshold,SWDTYPE_OTHER,EEPROM_LOCATION);
-
+byte lineFreq[8];
+REGISTER regLineFreq(lineFreq,sizeof(lineFreq),&updtLineFreq,NULL);
 /**
  * Initialize table of registers
  */
@@ -73,7 +74,8 @@ DECLARE_REGISTERS_START()
   &regRms,
   &regEnergy,
   &regAlerts,
-  &regThreshold
+  &regThreshold,
+  &regLineFreq
 DECLARE_REGISTERS_END()
 
 /**
@@ -146,6 +148,12 @@ const void updtRms(byte rId){
     regTable[rId]->value[z*6+4]= (ADErms>>8) & 0xff;
     regTable[rId]->value[z*6+5]= ADErms & 0xff;
   }
+  TSTAMP ts = rtc.now();
+  uint32_t time=ts.unixtime();
+  regTable[rId]->value[12] =(time>>24) & 0xFF; 
+  regTable[rId]->value[13] =(time>>16) & 0xFF; 
+  regTable[rId]->value[14] =(time>>8) & 0xFF; 
+  regTable[rId]->value[15] =(time) & 0xFF; 
   
 }
 
@@ -165,6 +173,12 @@ const void updtEnergy(byte rId){
     regTable[rId]->value[z*6+4]= (ADEenergy>>8) & 0xff;
     regTable[rId]->value[z*6+5]= (ADEenergy) & 0xff;
   }
+  TSTAMP ts = rtc.now();
+  uint32_t time=ts.unixtime();
+  regTable[rId]->value[12] =(time>>24) & 0xFF; 
+  regTable[rId]->value[13] =(time>>16) & 0xFF; 
+  regTable[rId]->value[14] =(time>>8) & 0xFF; 
+  regTable[rId]->value[15] =(time) & 0xFF; 
 }
 
 const void updtAlerts(byte rId){
@@ -215,6 +229,12 @@ const void updtAlerts(byte rId){
   }
   
   regTable[rId]->value[0]= alertReg;
+  TSTAMP ts = rtc.now();
+  uint32_t time=ts.unixtime();
+  regTable[rId]->value[1] =(time>>24) & 0xFF; 
+  regTable[rId]->value[2] =(time>>16) & 0xFF; 
+  regTable[rId]->value[3] =(time>>8) & 0xFF; 
+  regTable[rId]->value[4] =(time) & 0xFF; 
  
 }
 
@@ -225,24 +245,42 @@ const void setThreshold(byte rId, byte *calib)
 
 const void setTimeStamp(byte rId, byte *timestmp)
 {
-  /*memcpy(regTable[rId]->value,timestmp,sizeof(*regTable[rId]->value));
+  memcpy(regTable[rId]->value,timestmp,sizeof(*regTable[rId]->value));
   uint32_t time; 
   time = (uint32_t)(regTable[rId]->value[0]) << 24;
   time = time | (uint32_t)(regTable[rId]->value[1]) << 16;
   time = time | (uint32_t)(regTable[rId]->value[2]) << 8;
   time = time | regTable[rId]->value[3]; 
   rtc.adjust(time);
-*/
+
 }
 
 const void updtTimeStamp(byte rId)
 {
- /* TSTAMP ts = rtc.now();
+  TSTAMP ts = rtc.now();
   uint32_t time=ts.unixtime();
   regTable[rId]->value[0] =(time>>24) & 0xFF; 
   regTable[rId]->value[1] =(time>>16) & 0xFF; 
   regTable[rId]->value[2] =(time>>8) & 0xFF; 
   regTable[rId]->value[3] =(time) & 0xFF; 
-   */ 
+   
 }
 
+const void updtLineFreq(byte rId)
+{
+  unsigned long ADEFreq;
+  // read RMS values of Vac, Iac,Vbc, Ibc,. Big endian.
+  for (int z = 0; z <2; z++)
+  {
+    ADEFreq = ADE.lineFreq(PHASE_A + z);
+    Serial.println(ADEFreq,HEX);
+    regTable[rId]->value[z*2]= (ADEFreq>>8) & 0xff;
+    regTable[rId]->value[z*2+1]= ADEFreq & 0xff;
+  }
+  TSTAMP ts = rtc.now();
+  uint32_t time=ts.unixtime();
+  regTable[rId]->value[4] =(time>>24) & 0xFF; 
+  regTable[rId]->value[5] =(time>>16) & 0xFF; 
+  regTable[rId]->value[6] =(time>>8) & 0xFF; 
+  regTable[rId]->value[7] =(time) & 0xFF; 
+}

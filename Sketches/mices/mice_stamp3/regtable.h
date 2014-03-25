@@ -30,9 +30,9 @@
 #include "Arduino.h"
 #include "register.h"
 #include "commonregs.h"
-//#include "rtc.h"
+#include "rtc.h"
 
-//extern DS1307 rtc;
+extern DS1307 rtc;
 /**
  * Register indexes
  */
@@ -43,7 +43,8 @@ DEFINE_REGINDEX_START()
   REGI_RMS,
   REGI_ENERGY,
   REGI_ALERTS,
-  REGI_THRESHOLD
+  REGI_THRESHOLD,
+  REGI_LINEFREQ,
 DEFINE_REGINDEX_END()
 
 #endif

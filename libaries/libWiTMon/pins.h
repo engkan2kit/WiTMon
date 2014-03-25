@@ -37,9 +37,9 @@
 #define ADE_SS 5
 
 //soft SPI
-#define _MISO  A0
-#define _MOSI  A1
-#define _SCK   A2
+#define _MISO  8
+#define _MOSI  6
+#define _SCK   7
 #define _SS  ADE_SS
 
 
@@ -69,9 +69,10 @@
 #define ADE_SS 5   //PB1 = ADESS
 
 //soft SPI
-#define _MISO  A0
-#define _MOSI  A1
-#define _SCK   A2
+//soft SPI
+#define _MISO  8
+#define _MOSI  6
+#define _SCK   7
 #define _SS  ADE_SS
 
  

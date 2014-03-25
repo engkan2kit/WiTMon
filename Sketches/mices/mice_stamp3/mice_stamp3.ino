@@ -1,3 +1,5 @@
+#include <Wire.h>
+
 #include "regtable.h"
 #include "panstamp.h"
 
@@ -11,7 +13,7 @@
 #define alertCounts 5
 
 
-const int LED = 4;
+const int LED = 9;
 byte alertOVAC_ctr=0;
 byte alertOVBC_ctr=0;
 byte alertUVAC_ctr=0;

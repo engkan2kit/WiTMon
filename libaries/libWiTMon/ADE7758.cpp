@@ -3,10 +3,6 @@
 #include "software_spi.h"
 #include "ADE7758.h"
 #include <avr/wdt.h>
-
-int potpin0;
-int potpin1;
-
 extern void isrGDO0event(void);
 //public
 ADE7758::ADE7758(int SSpin):
