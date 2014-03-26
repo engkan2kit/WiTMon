@@ -81,19 +81,19 @@
 #define VERSION   0x7F
 
 #define REG_READ(reg) reg
-#define REG_WRITE(reg)  (unsigned char)((reg) | 0x80)
+#define REG_WRITE(reg)	(unsigned char)((reg) | 0x80)
 
 //PHASE_SEL
-#define PHASE_A     0
-#define PHASE_B     1
-#define PHASE_C     2
+#define PHASE_A		0
+#define PHASE_B		1
+#define PHASE_C		2
 
 //WAV_SEL
-#define CURRENT     0
-#define VOLTAGE     1
-#define ACT_PWR     2
-#define REACT_PWR   3
-#define APP_PWR     4
+#define CURRENT		0
+#define VOLTAGE		1
+#define ACT_PWR		2
+#define REACT_PWR	3
+#define APP_PWR		4
 
 //interrupt mask/status bit
 #define AEHF            0
@@ -162,7 +162,7 @@ class ADE7758
     int getVAHR(char phase);
 
     SPI _ADE7758SPI;
-    int _SSpin; 
+    int _SSpin;	
 
 
     long accuWattHRA;

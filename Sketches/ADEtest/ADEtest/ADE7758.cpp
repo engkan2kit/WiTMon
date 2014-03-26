@@ -115,6 +115,7 @@ int ADE7758::lineFreq(char phase){
 
 void ADE7758::enableChip()
 {
+
     digitalWrite(_SSpin, LOW);
 }
 

@@ -23,22 +23,22 @@ void loop()
     switch(inputChar){
       case 'b':
               Serial.println("CURRENT RMS readings for each phase:");
-              Serial.println(ADE.IRMS(PHASE_B), HEX);
+              Serial.println(ADE.IRMS(PHASE_A), DEC);
 
               break;
       case 'c':
               Serial.println("VOLTAGE RMS readings for each phase:");
-              Serial.println(ADE.VRMS(PHASE_B), HEX);
+              Serial.println(ADE.VRMS(PHASE_A), DEC);
 
               break;
               
       case 'z':
               Serial.println("SPI Test");
-              Serial.println( ADE.read8bits(OPMODE),HEX);
+              Serial.println( ADE.read8bits(OPMODE),DEC);
               break;
       case 'q':
               Serial.println("SPI Test");
-              Serial.println( ADE.read8bits(0),HEX);
+              Serial.println( ADE.read8bits(0),DEC);
               break;
       case 'f':
               Serial.println("Freq phase A");
@@ -46,7 +46,7 @@ void loop()
               mmode = ADE.read8bits(MMODE);
               ADE.write8bits(MMODE,(mmode&0x11111100 ));
               delay(10);
-              Serial.println( ADE.read8bits(FREQ),HEX);
+              Serial.println( ADE.lineFreq(0),DEC);
               break;
       case 'g':
               Serial.println("Freq phase B");
@@ -54,16 +54,13 @@ void loop()
               mmode = ADE.read8bits(MMODE);
               ADE.write8bits(MMODE,(mmode&0x11111100 )| 0x01);
               delay(10);
-              Serial.println( ADE.read8bits(FREQ),HEX);
+              Serial.println( ADE.lineFreq(1),DEC);
               break;
       case 'h':
               Serial.println("Freq phase C");
-   
-              mmode = ADE.read8bits(MMODE);
-              ADE.write8bits(MMODE,(mmode&0x11111100)| 0x11);
-              delay(10);
-              Serial.println( ADE.read8bits(FREQ),HEX);
+              Serial.println( ADE.lineFreq(2),DEC);
               break;
+      
       default:
           Serial.println("unknown command");
     }
